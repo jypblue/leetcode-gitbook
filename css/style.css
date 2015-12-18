@@ -1351,6 +1351,24 @@ a.article-title:hover {
 #comments a {
   color: #3b8dbd;
 }
+#ds-thread #ds-reset li.ds-tab a.ds-current {
+  background: none !important;
+}
+#ds-thread #ds-reset .ds-textarea-wrapper {
+  background: none !important;
+}
+#ds-thread #ds-reset a.ds-like-thread-button {
+  background: none !important;
+}
+#ds-thread #ds-reset .ds-gradient-bg {
+  background: none !important;
+}
+#ds-thread #ds-reset .ds-post-button {
+  background: none !important;
+}
+#ds-thread #ds-reset .ds-account-control ul {
+  background-color: #fff;
+}
 .archives-wrap {
   margin: block-margin 0;
 }
