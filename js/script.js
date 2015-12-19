@@ -24,6 +24,7 @@
         return;
       }
     } else {
+      // 修改分享地址的地方
       var html = [
         '<div id="' + id + '" class="article-share-box">',
           '<input class="article-share-input" value="' + url + '">',
@@ -80,7 +81,7 @@
   }
 
   //Back to top
-  $("#back-to-top").on('click', function(){  
+  $("#back-to-top").on('click', function(){
     $('body,html').animate({scrollTop:0}, 600);
-  }); 
+  });
 })(jQuery);
