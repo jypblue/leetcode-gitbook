@@ -23,7 +23,7 @@
 #####H5页面窗口自动调整到设备宽度，并禁止用户缩放页面
 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&amp;gt;
 #####删除苹果默认的工具">
-<meta property="og:updated_time" content="2015-12-20T17:28:54.000Z">
+<meta property="og:updated_time" content="2015-12-20T17:31:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端css使用">
 <meta name="twitter:description" content="#移动端css使用
@@ -251,14 +251,29 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'html'</span>).one(<span class="string">'touchstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    audio.play()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>#####摇一摇功能<br>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p>
 <p>#####手机拍照和上传图片</p>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"file"</span>&gt;</span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line"></span><br><span class="line">的accept 属性</span><br><span class="line"></span><br><span class="line">######选择照片</span><br></pre></td></tr></table></figure>
-<p><input type="file" accept="image/*"><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">######选择视频</span></span><br></pre></td></tr></table></figure></p>
-<p><input type="file" accept="video/*"><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">使用总结：</span><br><span class="line"></span><br><span class="line">ios 有拍照、录像、选取本地图片功能</span><br><span class="line">部分android只有选取本地图片功能</span><br><span class="line">winphone不支持</span><br><span class="line">input控件默认外观丑陋</span><br><span class="line"></span><br><span class="line">#####微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整</span><br><span class="line">原因</span><br><span class="line"></span><br><span class="line">android侧是复写了layoutinflater 对textview做了统一处理</span><br><span class="line">ios侧是修改了<span class="tag">body</span><span class="class">.style</span><span class="class">.webkitTextSizeAdjust</span>值</span><br><span class="line">普通解决方案：</span><br><span class="line"></span><br><span class="line">android暂无方案</span><br><span class="line">ios使用-webkit-text-size-adjust禁止调整字体大小</span><br></pre></td></tr></table></figure></p>
-<p>body{-webkit-text-size-adjust: 100%!important;}<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">最好的解决方案：</span><br><span class="line"></span><br><span class="line">整个页面用<span class="comment">rem或者百分比布局</span></span><br><span class="line"></span><br><span class="line">#####消除transition闪屏</span><br><span class="line">网络都是这么写的，但我并没有测试出来</span><br></pre></td></tr></table></figure></p>
-<p>.css{<br>//设置内嵌的元素在 3D 空间如何呈现：保留 3D<br>-webkit-transform-style: preserve-3d;<br>//（设置进行转换的元素的背面在面对用户时是否可见：隐藏）<br>-webkit-backface-visibility: hidden;<br>}<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">开启硬件加速</span><br><span class="line">解决页面闪白</span><br><span class="line">保证动画流畅</span><br></pre></td></tr></table></figure></p>
-<p>.css {<br>   -webkit-transform: translate3d(0, 0, 0);<br>   -moz-transform: translate3d(0, 0, 0);<br>   -ms-transform: translate3d(0, 0, 0);<br>   transform: translate3d(0, 0, 0);<br>}<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="vala"><span class="preprocessor">#####取消input在ios下，输入的时候英文首字母的默认大写</span></span></span><br></pre></td></tr></table></figure></p>
-<p><input autocapitalize="off" autocorrect="off"><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">####<span class="id">#android</span> 上去掉语音输入按钮</span><br></pre></td></tr></table></figure></p>
-<p>input::-webkit-input-speech-button {display: none}<br>```</p>
+<p>`</p>
+<p><input type="file"><br>`</p>
+<p>的accept 属性</p>
+<p>######选择照片</p>
+<p>`</p>
+<p><input type="file" accept="image/*"><br>`</p>
+<p>######选择视频</p>
+<p>`</p>
+<p><input type="file" accept="video/*"><br>`</p>
+<p>使用总结：</p>
+<p>ios 有拍照、录像、选取本地图片功能<br>部分android只有选取本地图片功能<br>winphone不支持<br>input控件默认外观丑陋</p>
+<p>#####微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整<br>原因</p>
+<p>android侧是复写了layoutinflater 对textview做了统一处理<br>ios侧是修改了body.style.webkitTextSizeAdjust值<br>普通解决方案：</p>
+<p>android暂无方案<br>ios使用-webkit-text-size-adjust禁止调整字体大小</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">body</span><span class="rules">&#123;<span class="rule"><span class="attribute">-webkit-text-size-adjust</span>:<span class="value"> <span class="number">100%</span><span class="important">!important</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>最好的解决方案：</p>
+<p>整个页面用rem或者百分比布局</p>
+<p>#####消除transition闪屏<br>网络都是这么写的，但我并没有测试出来</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.css</span>&#123;</span><br><span class="line"><span class="comment">//设置内嵌的元素在 3D 空间如何呈现：保留 3D</span></span><br><span class="line"><span class="attribute">-webkit-transform-style</span>: preserve-<span class="number">3</span>d;</span><br><span class="line"><span class="comment">//（设置进行转换的元素的背面在面对用户时是否可见：隐藏）</span></span><br><span class="line"><span class="attribute">-webkit-backface-visibility</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>开启硬件加速<br>解决页面闪白<br>保证动画流畅</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.css</span> <span class="rules">&#123;</span><br><span class="line">   <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">translate3d</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-moz-transform</span>:<span class="value"> <span class="function">translate3d</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-ms-transform</span>:<span class="value"> <span class="function">translate3d</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translate3d</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>#####取消input在ios下，输入的时候英文首字母的默认大写<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="tag">input</span> autocapitalize=<span class="string">"off"</span> autocorrect=<span class="string">"off"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>#####android 上去掉语音输入按钮<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">input:</span><span class="symbol">:-webkit-input-speech-button</span> &#123;<span class="symbol">display:</span> none&#125;</span><br></pre></td></tr></table></figure></p>
 <p>#####android 2.3 bug<br>@-webkit-keyframes 需要以0%开始100%结束，0%的百分号不能去掉<br>after和before伪类无法使用动画<br>border-radius不支持%单位<br>translate百分比的写法和scale在一起会导致失效，例如-webkit-transform: translate(-50%,-50%) scale(-0.5, 1)</p>
 <p>#####android 4.x bug<br>三星 Galaxy S4中自带浏览器不支持border-radius缩写<br>同时设置border-radius和背景色的时候，背景色会溢出到圆角以外部分<br>部分手机(如三星)，a链接支持鼠标:visited事件，也就是说链接访问后文字变为紫色</p>
 <p>设计高性能CSS3动画的几个要素<br>尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位<br>利用translate3D开启GPU加速</p>
@@ -288,7 +303,7 @@
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/移动端css使用/" data-id="ciiet5ubx0006hcwmt0r4ewud" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2015/12/18/移动端css使用/" data-id="ciietau310006m7wmhofx42kf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
