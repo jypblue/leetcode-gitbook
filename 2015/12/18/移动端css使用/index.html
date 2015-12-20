@@ -23,7 +23,7 @@
 #####H5页面窗口自动调整到设备宽度，并禁止用户缩放页面
 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&amp;gt;
 #####删除苹果默认的工具">
-<meta property="og:updated_time" content="2015-12-20T17:26:55.000Z">
+<meta property="og:updated_time" content="2015-12-20T17:28:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端css使用">
 <meta name="twitter:description" content="#移动端css使用
@@ -250,7 +250,8 @@
 <p>#####audio元素和video元素在ios和andriod中无法自动播放<br>应对方案：触屏即播</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'html'</span>).one(<span class="string">'touchstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    audio.play()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>#####摇一摇功能<br>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p>
-<p>#####手机拍照和上传图片<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"file"</span>&gt;</span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line">的accept 属性</span><br><span class="line"></span><br><span class="line">######选择照片</span><br></pre></td></tr></table></figure></p>
+<p>#####手机拍照和上传图片</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"file"</span>&gt;</span><br><span class="line"><span class="escape">``</span><span class="escape">` </span></span><br><span class="line"></span><br><span class="line">的accept 属性</span><br><span class="line"></span><br><span class="line">######选择照片</span><br></pre></td></tr></table></figure>
 <p><input type="file" accept="image/*"><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">######选择视频</span></span><br></pre></td></tr></table></figure></p>
 <p><input type="file" accept="video/*"><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">使用总结：</span><br><span class="line"></span><br><span class="line">ios 有拍照、录像、选取本地图片功能</span><br><span class="line">部分android只有选取本地图片功能</span><br><span class="line">winphone不支持</span><br><span class="line">input控件默认外观丑陋</span><br><span class="line"></span><br><span class="line">#####微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整</span><br><span class="line">原因</span><br><span class="line"></span><br><span class="line">android侧是复写了layoutinflater 对textview做了统一处理</span><br><span class="line">ios侧是修改了<span class="tag">body</span><span class="class">.style</span><span class="class">.webkitTextSizeAdjust</span>值</span><br><span class="line">普通解决方案：</span><br><span class="line"></span><br><span class="line">android暂无方案</span><br><span class="line">ios使用-webkit-text-size-adjust禁止调整字体大小</span><br></pre></td></tr></table></figure></p>
 <p>body{-webkit-text-size-adjust: 100%!important;}<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">最好的解决方案：</span><br><span class="line"></span><br><span class="line">整个页面用<span class="comment">rem或者百分比布局</span></span><br><span class="line"></span><br><span class="line">#####消除transition闪屏</span><br><span class="line">网络都是这么写的，但我并没有测试出来</span><br></pre></td></tr></table></figure></p>
@@ -287,7 +288,7 @@
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/移动端css使用/" data-id="ciiet3k1k0006cjwmawtr0zg4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2015/12/18/移动端css使用/" data-id="ciiet5ubx0006hcwmt0r4ewud" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
