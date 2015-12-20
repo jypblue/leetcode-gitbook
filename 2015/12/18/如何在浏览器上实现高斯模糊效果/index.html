@@ -27,9 +27,9 @@ canvas实现高斯模糊
 ##1.css实现高斯模糊
 ####css3 blur滤镜实现css代码如下：
  123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);">
-<meta property="og:image" content="http://jypblue.github.io/./img/blur1.png">
-<meta property="og:image" content="http://jypblue.github.io/./img/blur2.png">
-<meta property="og:updated_time" content="2015-12-20T16:27:25.000Z">
+<meta property="og:image" content="http://1.jethub.sinaapp.com/pic/blur1.png">
+<meta property="og:image" content="http://1.jethub.sinaapp.com/pic/blur2.png">
+<meta property="og:updated_time" content="2015-12-20T16:46:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在浏览器实现高斯模糊">
 <meta name="twitter:description" content="如何在浏览器实现高斯模糊
@@ -147,11 +147,11 @@ canvas实现高斯模糊
 <p>####css3 blur滤镜实现<br>css代码如下：</p>
  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.blur</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">     <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;</span><br><span class="line">      <span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;    </span><br><span class="line">          <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p> 但是仅这样做，在浏览器显示会出现白边的问题，如下图：</p>
-<p> <img src="./img/blur1.png" alt="blur1"></p>
+<p> <img src="http://1.jethub.sinaapp.com/pic/blur1.png" alt="blur1"></p>
 <p> 所以需要在此基础上添加没有blur样式图片盖掉白边：</p>
  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1"</span>/&gt;</span><br><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1"</span> class=<span class="string">"blur"</span>/&gt;</span><br></pre></td></tr></table></figure>
 <p> 这样显示就正常了：</p>
-<p> <img src="./img/blur2.png" alt="blur2"></p>
+<p> <img src="http://1.jethub.sinaapp.com/pic/blur2.png" alt="blur2"></p>
 <p> 如果需要在PC端实现高斯模糊效果，则需要兼容IE及Firefox等浏览器，则只需添加IE filter滤镜和svg文件就好了：</p>
  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 	<span class="class">.blur</span><span class="rules">&#123;</span><br><span class="line"> 		<span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">url</span>(blur.svg<span class="hexcolor">#b</span>lur)</span></span>;  <span class="comment">/* FireFox, Chrome, Opera */</span></span><br><span class="line">	    <span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>; <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">    	   <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;</span><br><span class="line">        	<span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;    </span><br><span class="line">            	<span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Blur</span>(PixelRadius=<span class="number">10</span>, MakeShadow=false)</span></span>; <span class="comment">/* IE6~IE9 */</span></span><br><span class="line"> 	&#125;</span></span><br></pre></td></tr></table></figure>
 <p> 至此利用css实现了兼容性较好的高斯模糊效果。</p>
@@ -181,7 +181,7 @@ canvas实现高斯模糊
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="ciierauc9000fiywm40i4d9tl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="ciierorhv000fq1wm1myv5etu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
@@ -337,7 +337,7 @@ canvas实现高斯模糊
               
 <a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="thumbnail">
   
-    <span style="background-image:url(./img/blur1.png
+    <span style="background-image:url(http://1.jethub.sinaapp.com/pic/blur1.png
 )" alt="如何在浏览器实现高斯模糊" class="thumbnail-image"></span>
   
 </a>
