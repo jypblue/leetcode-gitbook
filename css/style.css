@@ -1369,6 +1369,9 @@ a.article-title:hover {
 #ds-thread #ds-reset .ds-account-control ul {
   background-color: #fff;
 }
+#ds-thread #ds-reset .ds-replybox {
+  z-index: 1;
+}
 .archives-wrap {
   margin: block-margin 0;
 }
