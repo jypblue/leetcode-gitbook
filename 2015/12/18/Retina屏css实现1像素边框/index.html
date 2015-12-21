@@ -9,25 +9,22 @@
   <meta name="keywords" content="css">
   
 
-  <meta name="description" content="#Retina屏下css实现1像素边框
-##1.transform:scale(0.5)实现方式：
+  <meta name="description" content="Retina屏下css实现1像素边框1.transform:scale(0.5)实现方式：
 1234height:1px;-webkit-transform: scaleY(0.5);-webkit-transform-origin:0 0;overflow: hidden;
-此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以">
+此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以画2条线">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Retina屏下css实现1像素边框">
 <meta property="og:url" content="http://jypblue.github.io/2015/12/18/Retina屏css实现1像素边框/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="#Retina屏下css实现1像素边框
-##1.transform:scale(0.5)实现方式：
+<meta property="og:description" content="Retina屏下css实现1像素边框1.transform:scale(0.5)实现方式：
 1234height:1px;-webkit-transform: scaleY(0.5);-webkit-transform-origin:0 0;overflow: hidden;
-此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以">
-<meta property="og:updated_time" content="2015-12-20T16:25:53.000Z">
+此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以画2条线">
+<meta property="og:updated_time" content="2015-12-21T08:59:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Retina屏下css实现1像素边框">
-<meta name="twitter:description" content="#Retina屏下css实现1像素边框
-##1.transform:scale(0.5)实现方式：
+<meta name="twitter:description" content="Retina屏下css实现1像素边框1.transform:scale(0.5)实现方式：
 1234height:1px;-webkit-transform: scaleY(0.5);-webkit-transform-origin:0 0;overflow: hidden;
-此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以">
+此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以画2条线">
   
   
     <link rel="icon" href="/favicon.png">
@@ -128,33 +125,30 @@
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>#Retina屏下css实现1像素边框</p>
-<p>##1.transform:scale(0.5)<br>实现方式：</p>
+        <h1 id="Retina_u5C4F_u4E0Bcss_u5B9E_u73B01_u50CF_u7D20_u8FB9_u6846"><a href="#Retina_u5C4F_u4E0Bcss_u5B9E_u73B01_u50CF_u7D20_u8FB9_u6846" class="headerlink" title="Retina屏下css实现1像素边框"></a>Retina屏下css实现1像素边框</h1><h2 id="1-transform_3Ascale_280-5_29"><a href="#1-transform_3Ascale_280-5_29" class="headerlink" title="1.transform:scale(0.5)"></a>1.transform:scale(0.5)</h2><p>实现方式：</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">height</span><span class="value">:<span class="number">1px</span>;</span></span><br><span class="line">-webkit-<span class="attribute">transform</span><span class="value">: <span class="function">scaleY</span>(<span class="number">0.5</span>);</span></span><br><span class="line">-webkit-<span class="attribute">transform-origin</span><span class="value">:<span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="attribute">overflow</span><span class="value">: hidden;</span></span><br></pre></td></tr></table></figure>
 <p>此方案配合:after和:before独立使用较多，比如画一个商品的边框四条线，容器的after和before可以画2条线，利用容器的父元素的after、before再画2条线。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.after-scale</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.after-scale</span><span class="pseudo">:after</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">""</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">bottom</span>:<span class="value"><span class="number">0px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">right</span>:<span class="value"><span class="number">0px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"><span class="number">1px</span> solid <span class="hexcolor">#c8c7cc</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"><span class="function">scaleY</span>(.<span class="number">5</span>)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transform-origin</span>:<span class="value"><span class="number">0</span> <span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>##2.box-shadow<br>实现方式：</p>
+<h2 id="2-box-shadow"><a href="#2-box-shadow" class="headerlink" title="2.box-shadow"></a>2.box-shadow</h2><p>实现方式：</p>
 <p>利用css 对阴影处理的方式实现0.5px的效果</p>
 <ul>
 <li>底部一条线</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-box-shadow:<span class="number">0</span> <span class="number">1</span>px <span class="number">1</span>px -<span class="number">1</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>基本所有场景都能满足，包含圆角的button，单条，多条线;但是颜色不好处理，黑色rgba(0,0,0,1)最浓的情况了。有的浏览器会有阴影出现，不好用。</p>
-<p>##3.background-image<br>实现方式：</p>
+<h2 id="3-background-image"><a href="#3-background-image" class="headerlink" title="3.background-image"></a>3.background-image</h2><p>实现方式：</p>
 <p>设置1px通过css 实现的image，50%有颜色，50%透明</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.border &#123;</span><br><span class="line">  background-image:linear-gradient(<span class="number">180</span>deg, red, red <span class="number">50</span>%, transparent <span class="number">50</span>%),</span><br><span class="line">  linear-gradient(<span class="number">270</span>deg, red, red <span class="number">50</span>%, transparent <span class="number">50</span>%),</span><br><span class="line">  linear-gradient(<span class="number">0</span>deg, red, red <span class="number">50</span>%, transparent <span class="number">50</span>%),</span><br><span class="line">  linear-gradient(<span class="number">90</span>deg, red, red <span class="number">50</span>%, transparent <span class="number">50</span>%);</span><br><span class="line">  background-size: <span class="number">100</span>% <span class="number">1</span>px,<span class="number">1</span>px <span class="number">100</span>% ,<span class="number">100</span>% <span class="number">1</span>px, <span class="number">1</span>px <span class="number">100</span>%;</span><br><span class="line">  background-repeat: no-repeat;</span><br><span class="line">  background-position: top, right top,  bottom, left top;</span><br><span class="line">  padding: <span class="number">10</span>px;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <p>配合background-image,background-size,background-position可以实现单条、多条边框，边框的颜色随意设置;但如果有圆角的效果，很sorry圆角的地方没有线框的颜色，且要写的代码也不少。</p>
-<p>##4.用图片</p>
-<p>实现方式：</p>
+<h2 id="4-_u7528_u56FE_u7247"><a href="#4-_u7528_u56FE_u7247" class="headerlink" title="4.用图片"></a>4.用图片</h2><p>实现方式：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.border-image</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border-image</span>:<span class="value"><span class="function">url</span>(<span class="string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5JREFUeNpiPnH8zH/G////MzAxAAHTyRNn/wMEGABpvQm9g9TJ1QAAAABJRU5ErkJggg=="</span>) <span class="number">2</span> <span class="number">0</span> stretch</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">border-width</span>:<span class="value"> <span class="number">0px</span> <span class="number">0px</span> <span class="number">1px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>可以通过修改图片来达到圆角的效果，但是由于图片的原因，压缩过后的图片边缘变模糊了（不放大的情况下不明显），需要引用图片或者base64，边框颜色修改起来不方便。</p>
 <p>参考：<a href="http://stackoverflow.com/questions/8640521/can-you-have-a-0-5px-border-on-a-retina-display/25910251#25910251" target="_blank" rel="external">http://stackoverflow.com/questions/8640521/can-you-have-a-0-5px-border-on-a-retina-display/25910251#25910251</a></p>
-<p>###实际运用中，我会用box-shadow实现矩形四边线框一像素，而用transform搭配before、after伪类的形式实现单独一边的一像素。目前来看，可以适用绝大部分业务场景。</p>
-
+<h3 id="u5B9E_u9645_u8FD0_u7528_u4E2D_uFF0C_u6211_u4F1A_u7528box-shadow_u5B9E_u73B0_u77E9_u5F62_u56DB_u8FB9_u7EBF_u6846_u4E00_u50CF_u7D20_uFF0C_u800C_u7528transform_u642D_u914Dbefore_u3001after_u4F2A_u7C7B_u7684_u5F62_u5F0F_u5B9E_u73B0_u5355_u72EC_u4E00_u8FB9_u7684_u4E00_u50CF_u7D20_u3002_u76EE_u524D_u6765_u770B_uFF0C_u53EF_u4EE5_u9002_u7528_u7EDD_u5927_u90E8_u5206_u4E1A_u52A1_u573A_u666F_u3002"><a href="#u5B9E_u9645_u8FD0_u7528_u4E2D_uFF0C_u6211_u4F1A_u7528box-shadow_u5B9E_u73B0_u77E9_u5F62_u56DB_u8FB9_u7EBF_u6846_u4E00_u50CF_u7D20_uFF0C_u800C_u7528transform_u642D_u914Dbefore_u3001after_u4F2A_u7C7B_u7684_u5F62_u5F0F_u5B9E_u73B0_u5355_u72EC_u4E00_u8FB9_u7684_u4E00_u50CF_u7D20_u3002_u76EE_u524D_u6765_u770B_uFF0C_u53EF_u4EE5_u9002_u7528_u7EDD_u5927_u90E8_u5206_u4E1A_u52A1_u573A_u666F_u3002" class="headerlink" title="实际运用中，我会用box-shadow实现矩形四边线框一像素，而用transform搭配before、after伪类的形式实现单独一边的一像素。目前来看，可以适用绝大部分业务场景。"></a>实际运用中，我会用box-shadow实现矩形四边线框一像素，而用transform搭配before、after伪类的形式实现单独一边的一像素。目前来看，可以适用绝大部分业务场景。</h3>
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/Retina屏css实现1像素边框/" data-id="ciietdfbz0000r0wm1lpmwjo1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2015/12/18/Retina屏css实现1像素边框/" data-id="ciifqeg6c00000iwmsj7tqb9t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
