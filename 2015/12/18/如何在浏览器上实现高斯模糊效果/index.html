@@ -6,36 +6,28 @@
   <title>如何在浏览器实现高斯模糊 | 虾米爱吃鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="css3,html5,javascript">
+  <meta name="keywords" content="Canvas,Css3,Js">
   
 
-  <meta name="description" content="如何在浏览器实现高斯模糊
-css3实现高斯模糊
-canvas实现高斯模糊
-
-1.css实现高斯模糊css3 blur滤镜实现css代码如下：
- 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);">
+  <meta name="description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
+ 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
+ 但是仅这样">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在浏览器实现高斯模糊">
 <meta property="og:url" content="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="如何在浏览器实现高斯模糊
-css3实现高斯模糊
-canvas实现高斯模糊
-
-1.css实现高斯模糊css3 blur滤镜实现css代码如下：
- 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);">
+<meta property="og:description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
+ 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
+ 但是仅这样">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg">
 <meta property="og:image" content="http://7xpcj0.com1.z0.glb.clouddn.com/blur1.png">
 <meta property="og:image" content="http://7xpcj0.com1.z0.glb.clouddn.com/blur2.png">
-<meta property="og:updated_time" content="2015-12-22T02:32:51.000Z">
+<meta property="og:updated_time" content="2016-03-20T06:44:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在浏览器实现高斯模糊">
-<meta name="twitter:description" content="如何在浏览器实现高斯模糊
-css3实现高斯模糊
-canvas实现高斯模糊
-
-1.css实现高斯模糊css3 blur滤镜实现css代码如下：
- 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);">
+<meta name="twitter:description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
+ 123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
+ 但是仅这样">
   
   
     <link rel="icon" href="/favicon.png">
@@ -72,7 +64,7 @@ canvas实现高斯模糊
           </h1>
           
             <h2 class="subtitle-wrap">
-              <p class="subtitle">前端</p>
+              <p class="subtitle">前端 游记 生活</p>
             </h2>
           
         </div>
@@ -93,15 +85,39 @@ canvas实现高斯模糊
 
                 </a></li>
               
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Javascript/index.html">
+
+                javascript
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Css3/index.html">
+
+                css3
+
+                </a></li>
+              
                 <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Node/index.html">
 
                 node
 
                 </a></li>
               
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/LifeStyle/index.html">
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Es6/index.html">
 
-                生活
+                es6
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Tool/index.html">
+
+                工具
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Trip/index.html">
+
+                游记
 
                 </a></li>
               
@@ -152,10 +168,7 @@ canvas实现高斯模糊
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="u5982_u4F55_u5728_u6D4F_u89C8_u5668_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA"><a href="#u5982_u4F55_u5728_u6D4F_u89C8_u5668_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA" class="headerlink" title="如何在浏览器实现高斯模糊"></a>如何在浏览器实现高斯模糊</h1><ul>
-<li>css3实现高斯模糊</li>
-<li>canvas实现高斯模糊</li>
-</ul>
+        <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg" alt=""></p>
 <h2 id="1-css_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA"><a href="#1-css_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA" class="headerlink" title="1.css实现高斯模糊"></a>1.css实现高斯模糊</h2><h4 id="css3_blur_u6EE4_u955C_u5B9E_u73B0"><a href="#css3_blur_u6EE4_u955C_u5B9E_u73B0" class="headerlink" title="css3 blur滤镜实现"></a>css3 blur滤镜实现</h4><p>css代码如下：</p>
  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.blur</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">     <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;</span><br><span class="line">      <span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;    </span><br><span class="line">          <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p> 但是仅这样做，在浏览器显示会出现白边的问题，如下图：</p>
@@ -191,11 +204,11 @@ canvas实现高斯模糊
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="cileva6dc000fgjwmrttxkcp8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="cilu96itb000fewwmilzy2ne7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canvas/">Canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css3/">Css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li></ul>
 
       </footer>
     </div>
@@ -243,16 +256,22 @@ canvas实现高斯模糊
     
 <nav id="article-nav">
   
-    <a href="/2015/12/18/移动端css使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/05/node如何连接mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
       <p class="article-nav-title">
         
-          移动端css使用
+          Node连接Mongodb
         
       </p>
       <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
   
+  
+    <a href="/2015/12/18/Retina屏实现1像素/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">Retina屏实现1像素</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
   
 </nav>
 
@@ -269,7 +288,7 @@ canvas实现高斯模糊
             
             <div class="item-thumbnail">
               
-<a href="/2016/03/05/node如何连接mongodb/" class="thumbnail">
+<a href="/2016/03/20/Es6实现二叉树/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -278,9 +297,9 @@ canvas实现高斯模糊
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Node/">Node</a></p>
-              <p class="item-title"><a href="/2016/03/05/node如何连接mongodb/" class="title">Node连接Mongodb</a></p>
-              <p class="item-date"><time datetime="2016-03-05T07:05:46.000Z" itemprop="datePublished">2016-03-05</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Es6/">Es6</a></p>
+              <p class="item-title"><a href="/2016/03/20/Es6实现二叉树/" class="title">Es6实现二叉树</a></p>
+              <p class="item-date"><time datetime="2016-03-20T07:05:46.000Z" itemprop="datePublished">2016-03-20</time></p>
             </div>
           </li>
         
@@ -288,7 +307,7 @@ canvas实现高斯模糊
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/Retina屏css实现1像素边框/" class="thumbnail">
+<a href="/2016/03/16/gulp实现前端资源压缩/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -297,9 +316,9 @@ canvas实现高斯模糊
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/Retina屏css实现1像素边框/" class="title">Retina屏下css实现1像素边框</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
+              <p class="item-title"><a href="/2016/03/16/gulp实现前端资源压缩/" class="title">gulp实现前端资源压缩</a></p>
+              <p class="item-date"><time datetime="2016-03-16T10:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
             </div>
           </li>
         
@@ -307,7 +326,27 @@ canvas实现高斯模糊
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/移动端css使用/" class="thumbnail">
+<a href="/2016/03/16/H5开发遇到的一些坑/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/pits.jpg
+)" alt="H5开发遇到的一些坑" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
+              <p class="item-title"><a href="/2016/03/16/H5开发遇到的一些坑/" class="title">H5开发遇到的一些坑</a></p>
+              <p class="item-date"><time datetime="2016-03-16T07:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2016/03/16/Css实现多种图形/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -316,9 +355,9 @@ canvas实现高斯模糊
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/移动端css使用/" class="title">移动端css使用</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Css3/">Css3</a></p>
+              <p class="item-title"><a href="/2016/03/16/Css实现多种图形/" class="title">Css实现多种图形</a></p>
+              <p class="item-date"><time datetime="2016-03-16T03:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
             </div>
           </li>
         
@@ -326,19 +365,18 @@ canvas实现高斯模糊
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="thumbnail">
+<a href="/2016/03/13/Js各种排序算法/" class="thumbnail">
   
-    <span style="background-image:url(http://7xpcj0.com1.z0.glb.clouddn.com/blur1.png
-)" alt="如何在浏览器实现高斯模糊" class="thumbnail-image"></span>
+    <span class="thumbnail-image thumbnail-none"></span>
   
 </a>
 
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="title">如何在浏览器实现高斯模糊</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a></p>
+              <p class="item-title"><a href="/2016/03/13/Js各种排序算法/" class="title">Js实现常用算法</a></p>
+              <p class="item-date"><time datetime="2016-03-13T07:05:46.000Z" itemprop="datePublished">2016-03-13</time></p>
             </div>
           </li>
         
@@ -351,7 +389,7 @@ canvas实现高斯模糊
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css3/">Css3</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Es6/">Es6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Trip/">Trip</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -361,7 +399,7 @@ canvas实现高斯模糊
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -371,7 +409,7 @@ canvas实现高斯模糊
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动开发/">移动开发</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/">Css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css3/">Css3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Es6/">Es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摄影/">摄影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游玩/">游玩</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动开发/">移动开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动浏览器/">移动浏览器</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -381,7 +419,7 @@ canvas实现高斯模糊
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/移动开发/" style="font-size: 10px;">移动开发</a>
+      <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Css/" style="font-size: 15px;">Css</a> <a href="/tags/Css3/" style="font-size: 15px;">Css3</a> <a href="/tags/Es6/" style="font-size: 10px;">Es6</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Js/" style="font-size: 20px;">Js</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/游玩/" style="font-size: 10px;">游玩</a> <a href="/tags/移动开发/" style="font-size: 10px;">移动开发</a> <a href="/tags/移动浏览器/" style="font-size: 10px;">移动浏览器</a>
     </div>
   </div>
 

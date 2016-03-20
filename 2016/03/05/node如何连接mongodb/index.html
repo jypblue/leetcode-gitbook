@@ -6,19 +6,24 @@
   <title>Node连接Mongodb | 虾米爱吃鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Node">
+  <meta name="keywords" content="Mongodb,Node">
   
 
-  <meta name="description" content="jachin&apos;s blog | frontend | php | node | photography | lifestyle">
+  <meta name="description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node连接Mongodb">
 <meta property="og:url" content="http://jypblue.github.io/2016/03/05/node如何连接mongodb/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="jachin&apos;s blog | frontend | php | node | photography | lifestyle">
-<meta property="og:updated_time" content="2016-03-05T08:29:30.000Z">
+<meta property="og:description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#p">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/mongoose.png">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/mongomod.png">
+<meta property="og:updated_time" content="2016-03-20T09:52:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node连接Mongodb">
-<meta name="twitter:description" content="jachin&apos;s blog | frontend | php | node | photography | lifestyle">
+<meta name="twitter:description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#p">
   
   
     <link rel="icon" href="/favicon.png">
@@ -55,7 +60,7 @@
           </h1>
           
             <h2 class="subtitle-wrap">
-              <p class="subtitle">前端</p>
+              <p class="subtitle">前端 游记 生活</p>
             </h2>
           
         </div>
@@ -76,15 +81,39 @@
 
                 </a></li>
               
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Javascript/index.html">
+
+                javascript
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Css3/index.html">
+
+                css3
+
+                </a></li>
+              
                 <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Node/index.html">
 
                 node
 
                 </a></li>
               
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/LifeStyle/index.html">
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Es6/index.html">
 
-                生活
+                es6
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Tool/index.html">
+
+                工具
+
+                </a></li>
+              
+                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Trip/index.html">
+
+                游记
 
                 </a></li>
               
@@ -135,15 +164,43 @@
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        
+        <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/mongoose.png" alt=""></p>
+<p>今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。</p>
+<h4 id="1-_u5B89_u88C5mongodb"><a href="#1-_u5B89_u88C5mongodb" class="headerlink" title="1.安装mongodb"></a>1.安装mongodb</h4><p>首先我们进入mongodb官网<a href="https://www.mongodb.org/downloads#production" target="_blank" rel="external">https://www.mongodb.org/downloads#production</a> 选择自己需要的版本下载，然后直接点击安装即可。亦或者我们直接通过Homebrew进行安装，直接打开shell终端,运行命令行</p>
+<p>brew install mongodb </p>
+<h4 id="2-_u542F_u52A8mongodb"><a href="#2-_u542F_u52A8mongodb" class="headerlink" title="2.启动mongodb"></a>2.启动mongodb</h4><p>安装完成后我们需要启动mongodb数据库才能进行连接。继续运行命令行</p>
+<p>mongod –config /usr/local/etc/mongod.conf</p>
+<h4 id="3-_u8FDE_u63A5mongodb"><a href="#3-_u8FDE_u63A5mongodb" class="headerlink" title="3.连接mongodb"></a>3.连接mongodb</h4><p>连接mongodb,直接shell终端输入 </p>
+<p>mongo</p>
+<p>就进入mongodb操作界面，就可以使用mongodb语法增删修改数据库了。另外还有一个mongodb可视化管理工具Robomongo可以使用，跨平台的。用起来还是蛮方便的。</p>
+<h4 id="4-_u5229_u7528mongoose_u5728node_u9879_u76EE_u4E2D_u64CD_u7EB5mongodb"><a href="#4-_u5229_u7528mongoose_u5728node_u9879_u76EE_u4E2D_u64CD_u7EB5mongodb" class="headerlink" title="4.利用mongoose在node项目中操纵mongodb"></a>4.利用mongoose在node项目中操纵mongodb</h4><p>首先我们需要下载mongoose模块，直接在你的项目文件夹下运行</p>
+<p>npm install mongoose –save-dev</p>
+<p>就安装好了。然后直接根据官网的demo代码来做<br>1.引入mongoose，连接mongodb</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br></pre></td></tr></table></figure>
+<p>2.操作mongodb<br><img src="http://7xrkii.com1.z0.glb.clouddn.com/mongomod.png" alt=""></p>
+<p>mongoose的数据模型设计为Schema、Model、Documents三者。</p>
+<ul>
+<li>Schema 模式定义</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">  title:  <span class="built_in">String</span>,</span><br><span class="line">  author: <span class="built_in">String</span>,</span><br><span class="line">  body:   <span class="built_in">String</span>,</span><br><span class="line">  comments: [&#123; body: <span class="built_in">String</span>, date: <span class="built_in">Date</span> &#125;],</span><br><span class="line">  date: &#123; <span class="keyword">type</span>: <span class="built_in">Date</span>, <span class="keyword">default</span>: <span class="built_in">Date</span>.now &#125;,</span><br><span class="line">  hidden: <span class="built_in">Boolean</span>,</span><br><span class="line">  meta: &#123;</span><br><span class="line">    votes: <span class="built_in">Number</span>,</span><br><span class="line">    favs:  <span class="built_in">Number</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Model 编译模型</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="built_in">require</span>(<span class="string">'../schemas/blog'</span>);</span><br><span class="line"><span class="keyword">var</span> Blog = mongoose.model(<span class="string">'Blog'</span>, blogSchema);</span><br><span class="line"><span class="built_in">module</span>.exports = Blog;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Documents 文档实例化</li>
+</ul>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var Blog = require(<span class="string">'../models/blog);</span><br><span class="line">var small = new Blog(&#123; size: '</span><span class="transposed_variable">small'</span> &#125;);</span><br><span class="line"><span class="comment">//保存</span></span><br><span class="line"><span class="transposed_variable">Blog.</span>save(<span class="function"><span class="keyword">function</span> <span class="params">(err)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// saved!</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// or 增</span></span><br><span class="line"><span class="transposed_variable">Blog.</span>create(&#123; <span class="built_in">size</span>: <span class="string">'small'</span> &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(err, small)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// saved!</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//查询</span></span><br><span class="line"><span class="transposed_variable">Blog.</span>find(&#123; <span class="built_in">size</span>: <span class="string">'small'</span> &#125;).where(<span class="string">'createdDate'</span>).gt(oneYearAgo).exec(callback);</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line"><span class="transposed_variable">Blog.</span>remove(&#123; <span class="built_in">size</span>: <span class="string">'large'</span> &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(err)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// removed!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我的理解就是Schema是组装，定义数据字段的，Model进行数据的编译转化，Documents进行数据的实例化，做到增删改查的操作。</p>
+
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/05/node如何连接mongodb/" data-id="cileva6de000mgjwmriuehs6h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/05/node如何连接mongodb/" data-id="cilu96itd000mewwmwc34two9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mongodb/">Mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
 
       </footer>
     </div>
@@ -191,10 +248,20 @@
     
 <nav id="article-nav">
   
+    <a href="/2016/03/12/上海世纪公园/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <p class="article-nav-title">
+        
+          上海世纪公园之行
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
   
-    <a href="/2015/12/18/Retina屏css实现1像素边框/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <p class="article-nav-title">Retina屏下css实现1像素边框</p>
+      <p class="article-nav-title">如何在浏览器实现高斯模糊</p>
       <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
     </a>
   
@@ -213,7 +280,7 @@
             
             <div class="item-thumbnail">
               
-<a href="/2016/03/05/node如何连接mongodb/" class="thumbnail">
+<a href="/2016/03/20/Es6实现二叉树/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -222,9 +289,9 @@
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Node/">Node</a></p>
-              <p class="item-title"><a href="/2016/03/05/node如何连接mongodb/" class="title">Node连接Mongodb</a></p>
-              <p class="item-date"><time datetime="2016-03-05T07:05:46.000Z" itemprop="datePublished">2016-03-05</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Es6/">Es6</a></p>
+              <p class="item-title"><a href="/2016/03/20/Es6实现二叉树/" class="title">Es6实现二叉树</a></p>
+              <p class="item-date"><time datetime="2016-03-20T07:05:46.000Z" itemprop="datePublished">2016-03-20</time></p>
             </div>
           </li>
         
@@ -232,7 +299,7 @@
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/Retina屏css实现1像素边框/" class="thumbnail">
+<a href="/2016/03/16/gulp实现前端资源压缩/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -241,9 +308,9 @@
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/Retina屏css实现1像素边框/" class="title">Retina屏下css实现1像素边框</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
+              <p class="item-title"><a href="/2016/03/16/gulp实现前端资源压缩/" class="title">gulp实现前端资源压缩</a></p>
+              <p class="item-date"><time datetime="2016-03-16T10:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
             </div>
           </li>
         
@@ -251,7 +318,27 @@
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/移动端css使用/" class="thumbnail">
+<a href="/2016/03/16/H5开发遇到的一些坑/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/pits.jpg
+)" alt="H5开发遇到的一些坑" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
+              <p class="item-title"><a href="/2016/03/16/H5开发遇到的一些坑/" class="title">H5开发遇到的一些坑</a></p>
+              <p class="item-date"><time datetime="2016-03-16T07:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2016/03/16/Css实现多种图形/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -260,9 +347,9 @@
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/移动端css使用/" class="title">移动端css使用</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Css3/">Css3</a></p>
+              <p class="item-title"><a href="/2016/03/16/Css实现多种图形/" class="title">Css实现多种图形</a></p>
+              <p class="item-date"><time datetime="2016-03-16T03:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
             </div>
           </li>
         
@@ -270,19 +357,18 @@
             
             <div class="item-thumbnail">
               
-<a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="thumbnail">
+<a href="/2016/03/13/Js各种排序算法/" class="thumbnail">
   
-    <span style="background-image:url(http://7xpcj0.com1.z0.glb.clouddn.com/blur1.png
-)" alt="如何在浏览器实现高斯模糊" class="thumbnail-image"></span>
+    <span class="thumbnail-image thumbnail-none"></span>
   
 </a>
 
             </div>
             
             <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="title">如何在浏览器实现高斯模糊</a></p>
-              <p class="item-date"><time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a></p>
+              <p class="item-title"><a href="/2016/03/13/Js各种排序算法/" class="title">Js实现常用算法</a></p>
+              <p class="item-date"><time datetime="2016-03-13T07:05:46.000Z" itemprop="datePublished">2016-03-13</time></p>
             </div>
           </li>
         
@@ -295,7 +381,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css3/">Css3</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Es6/">Es6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Trip/">Trip</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -305,7 +391,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -315,7 +401,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动开发/">移动开发</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/">Css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css3/">Css3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Es6/">Es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摄影/">摄影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游玩/">游玩</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动开发/">移动开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动浏览器/">移动浏览器</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -325,7 +411,7 @@
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/移动开发/" style="font-size: 10px;">移动开发</a>
+      <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Css/" style="font-size: 15px;">Css</a> <a href="/tags/Css3/" style="font-size: 15px;">Css3</a> <a href="/tags/Es6/" style="font-size: 10px;">Es6</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Js/" style="font-size: 20px;">Js</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/游玩/" style="font-size: 10px;">游玩</a> <a href="/tags/移动开发/" style="font-size: 10px;">移动开发</a> <a href="/tags/移动浏览器/" style="font-size: 10px;">移动浏览器</a>
     </div>
   </div>
 
