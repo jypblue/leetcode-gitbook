@@ -3,32 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>gulp实现前端资源压缩 | 虾米爱吃鱼</title>
+  <title>gulp配置Es6及sass环境 | 虾米爱吃鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="gulp">
   
 
-  <meta name="description" content="gulp安装gulp是构建在node环境上的，所以安装gulp之前首先是需要安装好node，安装node的话直接去官网下载自己需要的版本，点击安装即可。
-1.全局安装gulp1npm install gulp -g
-2.作为项目开发依赖中安装gulp1npm install gulp --save-dev
-3.安装需要依赖的功能包模块12345npm install gulp-minify-css">
+  <meta name="description" content="之前已经讲过如何全局安装gulp，以及如何在开发项目中安装gulp依赖，那么这篇作为上篇的补充，说一下利用gulp-babel及gulp-sass包配置Es6及Sass转Es5及css的任务环境。
+1.安装所需gulp插件到指定的目录下执行
+npm init这个时候会生成一个叫package.json的文件，然后执行
+npm install gulp --save-dev会在package.jso">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gulp实现前端资源压缩">
-<meta property="og:url" content="http://jypblue.github.io/2016/03/21/gulp实现前端资源压缩/index.html">
+<meta property="og:title" content="gulp配置Es6及sass环境">
+<meta property="og:url" content="http://jypblue.github.io/2016/03/22/gulp实现配置Es6及sass环境/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="gulp安装gulp是构建在node环境上的，所以安装gulp之前首先是需要安装好node，安装node的话直接去官网下载自己需要的版本，点击安装即可。
-1.全局安装gulp1npm install gulp -g
-2.作为项目开发依赖中安装gulp1npm install gulp --save-dev
-3.安装需要依赖的功能包模块12345npm install gulp-minify-css">
-<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/gulpzipres.jpg">
-<meta property="og:updated_time" content="2016-03-21T07:58:20.000Z">
+<meta property="og:description" content="之前已经讲过如何全局安装gulp，以及如何在开发项目中安装gulp依赖，那么这篇作为上篇的补充，说一下利用gulp-babel及gulp-sass包配置Es6及Sass转Es5及css的任务环境。
+1.安装所需gulp插件到指定的目录下执行
+npm init这个时候会生成一个叫package.json的文件，然后执行
+npm install gulp --save-dev会在package.jso">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/gulpes6sass.jpg">
+<meta property="og:updated_time" content="2016-03-22T06:37:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gulp实现前端资源压缩">
-<meta name="twitter:description" content="gulp安装gulp是构建在node环境上的，所以安装gulp之前首先是需要安装好node，安装node的话直接去官网下载自己需要的版本，点击安装即可。
-1.全局安装gulp1npm install gulp -g
-2.作为项目开发依赖中安装gulp1npm install gulp --save-dev
-3.安装需要依赖的功能包模块12345npm install gulp-minify-css">
+<meta name="twitter:title" content="gulp配置Es6及sass环境">
+<meta name="twitter:description" content="之前已经讲过如何全局安装gulp，以及如何在开发项目中安装gulp依赖，那么这篇作为上篇的补充，说一下利用gulp-babel及gulp-sass包配置Es6及Sass转Es5及css的任务环境。
+1.安装所需gulp插件到指定的目录下执行
+npm init这个时候会生成一个叫package.json的文件，然后执行
+npm install gulp --save-dev会在package.jso">
   
   
     <link rel="icon" href="/favicon.png">
@@ -149,7 +149,7 @@
             </div>
             <div class="main-body-content">
               
-  <article id="post-gulp实现前端资源压缩" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-gulp实现配置Es6及sass环境" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -157,32 +157,67 @@
           
   
     <h1 class="article-title" itemprop="name">
-      gulp实现前端资源压缩
+      gulp配置Es6及sass环境
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2016/03/21/gulp实现前端资源压缩/" class="article-date">
-  <time datetime="2016-03-21T08:05:46.000Z" itemprop="datePublished">2016-03-21</time>
+        <a href="/2016/03/22/gulp实现配置Es6及sass环境/" class="article-date">
+  <time datetime="2016-03-22T08:05:46.000Z" itemprop="datePublished">2016-03-22</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/gulpzipres.jpg" alt=""></p>
-<h3 id="gulp_u5B89_u88C5"><a href="#gulp_u5B89_u88C5" class="headerlink" title="gulp安装"></a>gulp安装</h3><p>gulp是构建在node环境上的，所以安装gulp之前首先是需要安装好node，安装node的话直接去官网下载自己需要的版本，点击安装即可。</p>
-<h4 id="1-_u5168_u5C40_u5B89_u88C5gulp"><a href="#1-_u5168_u5C40_u5B89_u88C5gulp" class="headerlink" title="1.全局安装gulp"></a>1.全局安装gulp</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> gulp -<span class="keyword">g</span></span></span><br></pre></td></tr></table></figure>
-<h4 id="2-_u4F5C_u4E3A_u9879_u76EE_u5F00_u53D1_u4F9D_u8D56_u4E2D_u5B89_u88C5gulp"><a href="#2-_u4F5C_u4E3A_u9879_u76EE_u5F00_u53D1_u4F9D_u8D56_u4E2D_u5B89_u88C5gulp" class="headerlink" title="2.作为项目开发依赖中安装gulp"></a>2.作为项目开发依赖中安装gulp</h4><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-_u5B89_u88C5_u9700_u8981_u4F9D_u8D56_u7684_u529F_u80FD_u5305_u6A21_u5757"><a href="#3-_u5B89_u88C5_u9700_u8981_u4F9D_u8D56_u7684_u529F_u80FD_u5305_u6A21_u5757" class="headerlink" title="3.安装需要依赖的功能包模块"></a>3.安装需要依赖的功能包模块</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> gulp-minify-css <span class="comment">--save-dev</span></span><br><span class="line">npm <span class="keyword">install</span> gulp-<span class="keyword">concat</span> <span class="comment">--save-dev</span></span><br><span class="line">npm <span class="keyword">install</span> gulp-uglify <span class="comment">--save-dev</span></span><br><span class="line">npm <span class="keyword">install</span> gulp-<span class="keyword">rename</span> <span class="comment">--save-dev</span></span><br><span class="line">npm <span class="keyword">install</span> gulp-jshint <span class="comment">--save-dev</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="u5728_u9879_u76EE_u6839_u76EE_u5F55_u4E0B_u521B_u5EFA_u4E00_u4E2A_u540D_u4E3Agulpfile-js_u7684_u6587_u4EF6"><a href="#u5728_u9879_u76EE_u6839_u76EE_u5F55_u4E0B_u521B_u5EFA_u4E00_u4E2A_u540D_u4E3Agulpfile-js_u7684_u6587_u4EF6" class="headerlink" title="在项目根目录下创建一个名为gulpfile.js的文件"></a>在项目根目录下创建一个名为gulpfile.js的文件</h3><p>新建gulpfile.js,编写压缩任务js代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>),</span><br><span class="line">    concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</span><br><span class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</span><br><span class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>),</span><br><span class="line">    jshint=<span class="built_in">require</span>(<span class="string">'gulp-jshint'</span>);</span><br><span class="line">    <span class="comment">//语法检查</span></span><br><span class="line">    gulp.task(<span class="string">'jshint'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gulp.src(<span class="string">'js/*.js'</span>)</span><br><span class="line">            .pipe(jshint())</span><br><span class="line">            .pipe(jshint.reporter(<span class="string">'default'</span>));</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//压缩css</span></span><br><span class="line">    gulp.task(<span class="string">'minifycss'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gulp.src(<span class="string">'css/*.css'</span>)    <span class="comment">//需要操作的文件</span></span><br><span class="line">            .pipe(rename(&#123;suffix: <span class="string">'.min'</span>&#125;))   <span class="comment">//rename压缩后的文件名</span></span><br><span class="line">            .pipe(minifycss())   <span class="comment">//执行压缩</span></span><br><span class="line">            .pipe(gulp.dest(<span class="string">'Css'</span>));   <span class="comment">//输出文件夹</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//压缩，合并 js</span></span><br><span class="line">    gulp.task(<span class="string">'minifyjs'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gulp.src(<span class="string">'js/*.js'</span>)      <span class="comment">//需要操作的文件</span></span><br><span class="line">            .pipe(concat(<span class="string">'main.js'</span>))    <span class="comment">//合并所有js到main.js</span></span><br><span class="line">            .pipe(gulp.dest(<span class="string">'js'</span>))       <span class="comment">//输出到文件夹</span></span><br><span class="line">            .pipe(rename(&#123;suffix: <span class="string">'.min'</span>&#125;))   <span class="comment">//rename压缩后的文件名</span></span><br><span class="line">            .pipe(uglify())    <span class="comment">//压缩</span></span><br><span class="line">            .pipe(gulp.dest(<span class="string">'Js'</span>));  <span class="comment">//输出</span></span><br><span class="line">    &#125;);</span><br><span class="line">　　<span class="comment">//默认命令，在cmd中输入gulp后，执行的就是这个任务(压缩js需要在检查js之后操作)</span></span><br><span class="line">    gulp.task(<span class="string">'default'</span>,[<span class="string">'jshint'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        gulp.start(<span class="string">'minifycss'</span>,<span class="string">'minifyjs'</span>);</span><br><span class="line">　　&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="u8FD0_u884Cgulp_u4EFB_u52A1"><a href="#u8FD0_u884Cgulp_u4EFB_u52A1" class="headerlink" title="运行gulp任务"></a>运行gulp任务</h3><p>cd 到指定的项目目录，运行gulp.</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gulp</span><br></pre></td></tr></table></figure>
+        <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/gulpes6sass.jpg" alt=""></p>
+<p>之前已经讲过如何全局安装gulp，以及如何在开发项目中安装gulp依赖，那么这篇作为上篇的补充，说一下利用gulp-babel及gulp-sass包配置Es6及Sass转Es5及css的任务环境。</p>
+<h3 id="1-_u5B89_u88C5_u6240_u9700gulp_u63D2_u4EF6"><a href="#1-_u5B89_u88C5_u6240_u9700gulp_u63D2_u4EF6" class="headerlink" title="1.安装所需gulp插件"></a>1.安装所需gulp插件</h3><p>到指定的目录下执行</p>
+<p><code>npm init</code><br>这个时候会生成一个叫package.json的文件，然后执行</p>
+<p><code>npm install gulp --save-dev</code><br>会在package.json 里生成devDependencies对象，这个里面讲放入你所依赖的gulp插件,然后添加所需的各个插件。</p>
+<p>以下就是一个pageage.json的例子</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"demo"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">description</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">  "<span class="attribute">main</span>": <span class="value"><span class="string">"xxx.js"</span></span>,</span><br><span class="line">  "<span class="attribute">scripts</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">test</span>": <span class="value"><span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">author</span>": <span class="value"><span class="string">"XXX"</span></span>,</span><br><span class="line">  "<span class="attribute">license</span>": <span class="value"><span class="string">"ISC"</span></span>,</span><br><span class="line">  "<span class="attribute">devDependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">gulp-util</span>": <span class="value"><span class="string">"*"</span></span>,</span><br><span class="line">    "<span class="attribute">gulp</span>": <span class="value"><span class="string">"*"</span></span>,</span><br><span class="line">    "<span class="attribute">gulp-minify-css</span>": <span class="value"><span class="string">"*"</span></span>,</span><br><span class="line">    "<span class="attribute">gulp-uglify</span>": <span class="value"><span class="string">"*"</span></span>,</span><br><span class="line">    "<span class="attribute">gulp-concat</span>": <span class="value"><span class="string">"*"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>我们在执行一次以下命令，我们所需要的插件就会加载下来 </p>
+<p> <code>npm install</code></p>
+<p>接下来我们还需要新建一个js文件 gulpfile.js<br>最前面是加载gulp的插件，加载好插件之后，我们需要gulp帮我们执行任务.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载插件</span></span><br><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">  gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>),</span><br><span class="line">  uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</span><br><span class="line">  concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>)</span><br><span class="line">  minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 注册一个任务</span><br><span class="line"> */</span></span><br><span class="line">gulp.task(<span class="string">'concat'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  gulp.src([<span class="string">'./js/**/*.js'</span>, <span class="string">'!js/index.js'</span>])</span><br><span class="line">    .pipe(uglify())</span><br><span class="line">    .pipe(concat(<span class="string">'all.min.js'</span>))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./build'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'concat'</span>]);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  gulp.watch(<span class="string">'./js/**/*.js'</span>, [<span class="string">'concat'</span>]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="2-gulp_u7684api_u53EA_u6709_u7B80_u5355_u7684_u51E0_u4E2A"><a href="#2-gulp_u7684api_u53EA_u6709_u7B80_u5355_u7684_u51E0_u4E2A" class="headerlink" title="2.gulp的api只有简单的几个"></a>2.gulp的api只有简单的几个</h3><h3 id="task_u65B9_u6CD5"><a href="#task_u65B9_u6CD5" class="headerlink" title="task方法"></a>task方法</h3><p>task方法是用于定义一个具体任务的方法。如果需要执行任务，在终端执行gulp task-name。</p>
+<p><code>gulp.task(name[, deps], fn)</code></p>
+<p>第一个参数是任务的名字。</p>
+<p>第二个参数是array类型，指在跑当前任务时，对其它任务的依赖。也就是要执行当前任务，会先执行这些依赖的任务。<br><code>gulp.task(&#39;demo&#39;, [&#39;demo1&#39;, &#39;demo2&#39;], function(){ });</code> </p>
+<p>这是在执行demo任务时，会先同时执行demo1 和 demo2任务</p>
+<p>第三个参数是函数,指运行任务时，要执行的具体操作的内容.</p>
+<h3 id="src_u65B9_u6CD5_u662F_u6307_u5B9A_u6E90_u6587_u4EF6_u7684_u8F93_u5165_u8DEF_u5F84_uFF0Cpipe_u6709_u70B9_u50CF_u662F_u5C01_u95ED_u7684_u201C_u6D41_u6C34_u7EBF_u201D_uFF0C_u67D0_u4E2A_u4EA7_u54C1_u7ECF_u8FC7_u4E0A_u4E00_u4E2A_u5DE5_u5E8F_u5904_u7406_u540E_uFF0C_u5C31_u8F6C_u5165_u4E0B_u4E00_u4E2A_u5DE5_u5E8F_u53BB_u5904_u7406_uFF0C_u76F4_u5230_u5B8C_u6210_u3002_u4E5F_u5C31_u662F_u5C06_u4E0A_u4E00_u6B65_u7684_u8F93_u51FA_u8F6C_u5316_u4E0B_u4E00_u6B65_u7684_u8F93_u5165_u7684_u4E2D_u95F4_u8005"><a href="#src_u65B9_u6CD5_u662F_u6307_u5B9A_u6E90_u6587_u4EF6_u7684_u8F93_u5165_u8DEF_u5F84_uFF0Cpipe_u6709_u70B9_u50CF_u662F_u5C01_u95ED_u7684_u201C_u6D41_u6C34_u7EBF_u201D_uFF0C_u67D0_u4E2A_u4EA7_u54C1_u7ECF_u8FC7_u4E0A_u4E00_u4E2A_u5DE5_u5E8F_u5904_u7406_u540E_uFF0C_u5C31_u8F6C_u5165_u4E0B_u4E00_u4E2A_u5DE5_u5E8F_u53BB_u5904_u7406_uFF0C_u76F4_u5230_u5B8C_u6210_u3002_u4E5F_u5C31_u662F_u5C06_u4E0A_u4E00_u6B65_u7684_u8F93_u51FA_u8F6C_u5316_u4E0B_u4E00_u6B65_u7684_u8F93_u5165_u7684_u4E2D_u95F4_u8005" class="headerlink" title="src方法是指定源文件的输入路径，pipe有点像是封闭的“流水线”，某个产品经过上一个工序处理后，就转入下一个工序去处理，直到完成。也就是将上一步的输出转化下一步的输入的中间者"></a>src方法是指定源文件的输入路径，pipe有点像是封闭的“流水线”，某个产品经过上一个工序处理后，就转入下一个工序去处理，直到完成。也就是将上一步的输出转化下一步的输入的中间者</h3><p><code>gulp.src(globs[, options])</code></p>
+<p>第一个参数是string或者array,指定源文件的路径，可以是单个路径，也可以是个路径数组。</p>
+<ol>
+<li><p><code>app.js</code>　　　　指定具体文件</p>
+</li>
+<li><p><code>js/*</code>　　　　　匹配 js 目录下所有的文件，不包括子文件夹</p>
+</li>
+<li><p><code>js/*.js</code>　　　 匹配 js 目录下所有的扩展名为 .js 的文件，不包括子文件夹
+　　　　</p>
+</li>
+<li><code>js/*/*.js</code>　　匹配 js 目录下第一层子文件夹里的扩展名为 .js 的文件
+　　　　</li>
+<li><p><code>js/**/*.js</code>　 匹配 js 目录下所有文件夹层次下扩展名为 .js 的文件</p>
+</li>
+<li><p><code>!js/try.js</code>　 不包括 try.js 文件，在前五条文件匹配模式前加!，就忽略掉相应的文件</p>
+</li>
+</ol>
+<p>下面这个任务中,代表js目录下的所有js文件,但是不包括index.js这个文件</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 注册一个任务</span><br><span class="line"> */</span></span><br><span class="line">gulp.task(<span class="string">'concat'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  gulp.src([<span class="string">'./js/**/*.js'</span>, <span class="string">'!js/index.js'</span>])</span><br><span class="line">    .pipe(uglify())</span><br><span class="line">    .pipe(concat(<span class="string">'all.min.js'</span>))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./build'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="dest_u65B9_u6CD5_u662F_u6307_u5B9A_u88AB_u5904_u7406_u5B8C_u7684_u6587_u4EF6_u7684_u8F93_u51FA_u8DEF_u5F84_2C_u50CF_u4E0A_u9762_u90A3_u6837_u64CD_u4F5C_u7684_u8BDD_2C_u6700_u540E_u6587_u4EF6_u7684_u8F93_u51FA_u8DEF_u5F84_u662Fbuild_u76EE_u5F55"><a href="#dest_u65B9_u6CD5_u662F_u6307_u5B9A_u88AB_u5904_u7406_u5B8C_u7684_u6587_u4EF6_u7684_u8F93_u51FA_u8DEF_u5F84_2C_u50CF_u4E0A_u9762_u90A3_u6837_u64CD_u4F5C_u7684_u8BDD_2C_u6700_u540E_u6587_u4EF6_u7684_u8F93_u51FA_u8DEF_u5F84_u662Fbuild_u76EE_u5F55" class="headerlink" title="dest方法是指定被处理完的文件的输出路径,像上面那样操作的话,最后文件的输出路径是build目录"></a>dest方法是指定被处理完的文件的输出路径,像上面那样操作的话,最后文件的输出路径是build目录</h3><p><code>gulp.dest(path[, options])</code></p>
+<p><code>path</code> String 或 Function，指定输出文件的文件夹路径，可以是字符串，也可以是一个返回文件夹路径的函数。</p>
+<p><code>options</code> Object类型,两个属性 <code>cwd</code> <code>mode</code></p>
+<p><code>options.cwd</code> 类型：String，默认：<code>process.cwd()</code>  设置输出文件夹路径的相对路径，默认为当前脚本的工作目录的路径。　<br>　　　　<br><code>options.mode</code> 类型：String，默认：0777 设置被创建文件夹的权限。</p>
+<h3 id="watch_u65B9_u6CD5_u662F_u7528_u4E8E_u76D1_u542C_u6587_u4EF6_u53D8_u5316_uFF0C_u6587_u4EF6_u4E00_u4FEE_u6539_u5C31_u4F1A_u6267_u884C_u6307_u5B9A_u7684_u4EFB_u52A1_u3002"><a href="#watch_u65B9_u6CD5_u662F_u7528_u4E8E_u76D1_u542C_u6587_u4EF6_u53D8_u5316_uFF0C_u6587_u4EF6_u4E00_u4FEE_u6539_u5C31_u4F1A_u6267_u884C_u6307_u5B9A_u7684_u4EFB_u52A1_u3002" class="headerlink" title="watch方法是用于监听文件变化，文件一修改就会执行指定的任务。"></a>watch方法是用于监听文件变化，文件一修改就会执行指定的任务。</h3><p><code>gulp.watch(glob [, opts], tasks) or gulp.watch(glob [, opts, cb])</code></p>
+<p><code>glob</code>: <code>String</code> 或 <code>Array</code>，指定源文件的路径，可以是单个路径，也可以是个路径数组。路径匹配和上述<code>gulp.src()</code>方法路径匹配的模式一样</p>
+<p><code>opts</code> <code>Object</code>类型,4个属性 <code>cwd</code> <code>mode</code> <code>debounceDelay</code> <code>interval</code></p>
+<p><code>tasks</code> 类型：<code>Array</code>，监听到文件变化后，要被执行的任务的名字组成的数组.<br>　　　　<br><code>cd</code> 类型：<code>Function</code>，回调函数。</p>
 
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/21/gulp实现前端资源压缩/" data-id="cim31uvmn0016frwm8f8or7y6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/22/gulp实现配置Es6及sass环境/" data-id="cim31uvmk0011frwm1yk2h0iv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
@@ -195,7 +230,7 @@
   
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-gulp实现前端资源压缩" data-title="gulp实现前端资源压缩" data-url="http://jypblue.github.io/2016/03/21/gulp实现前端资源压缩/"></div>
+    <div class="ds-thread" data-thread-key="post-gulp实现配置Es6及sass环境" data-title="gulp配置Es6及sass环境" data-url="http://jypblue.github.io/2016/03/22/gulp实现配置Es6及sass环境/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -234,20 +269,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/22/gulp实现配置Es6及sass环境/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <p class="article-nav-title">
-        
-          gulp配置Es6及sass环境
-        
-      </p>
-      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2016/03/20/Es6实现二叉树/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/21/gulp实现前端资源压缩/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <p class="article-nav-title">Es6实现二叉树</p>
+      <p class="article-nav-title">gulp实现前端资源压缩</p>
       <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
     </a>
   
