@@ -3,22 +3,68 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Js实现常用算法 | 虾米爱吃鱼</title>
+  <title>Js排序算法 | 虾米爱吃鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="Javascript">
   
 
-  <meta name="description" content="jachin&apos;s blog | frontend | php | node | css | javascript | js | photography | trip">
+  <meta name="description" content="虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。
+首先列一下各种排序算法的时间复杂度，空间复杂度及稳定性：
+
+
+
+排序算法
+平均时间复杂度
+最坏时间复杂度
+空间复杂度
+稳定性
+
+
+
+
+冒泡排序
+O(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Js实现常用算法">
-<meta property="og:url" content="http://jypblue.github.io/2016/03/13/Js各种常用算法/index.html">
+<meta property="og:title" content="Js排序算法">
+<meta property="og:url" content="http://jypblue.github.io/2016/03/25/Js排序算法/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="jachin&apos;s blog | frontend | php | node | css | javascript | js | photography | trip">
-<meta property="og:updated_time" content="2016-03-21T02:36:21.000Z">
+<meta property="og:description" content="虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。
+首先列一下各种排序算法的时间复杂度，空间复杂度及稳定性：
+
+
+
+排序算法
+平均时间复杂度
+最坏时间复杂度
+空间复杂度
+稳定性
+
+
+
+
+冒泡排序
+O(">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png">
+<meta property="og:updated_time" content="2016-03-25T08:41:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Js实现常用算法">
-<meta name="twitter:description" content="jachin&apos;s blog | frontend | php | node | css | javascript | js | photography | trip">
+<meta name="twitter:title" content="Js排序算法">
+<meta name="twitter:description" content="虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。
+首先列一下各种排序算法的时间复杂度，空间复杂度及稳定性：
+
+
+
+排序算法
+平均时间复杂度
+最坏时间复杂度
+空间复杂度
+稳定性
+
+
+
+
+冒泡排序
+O(">
   
   
     <link rel="icon" href="/favicon.png">
@@ -139,7 +185,7 @@
             </div>
             <div class="main-body-content">
               
-  <article id="post-Js各种常用算法" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-Js排序算法" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -147,23 +193,123 @@
           
   
     <h1 class="article-title" itemprop="name">
-      Js实现常用算法
+      Js排序算法
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2016/03/13/Js各种常用算法/" class="article-date">
-  <time datetime="2016-03-13T07:05:46.000Z" itemprop="datePublished">2016-03-13</time>
+        <a href="/2016/03/25/Js排序算法/" class="article-date">
+  <time datetime="2016-03-25T03:15:46.000Z" itemprop="datePublished">2016-03-25</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        
+        <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png" alt=""></p>
+<p>虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。</p>
+<p>首先列一下各种排序算法的时间复杂度，空间复杂度及稳定性：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">冒泡排序</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">选择排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">插入排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">堆排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">二叉树排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-_u5192_u6CE1_u6392_u5E8F"><a href="#1-_u5192_u6CE1_u6392_u5E8F" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h4><ul>
+<li><p>算法原理</p>
+<p>  相邻的数据进行两两比较，较小的数放在前面，较大的数放在后面，循环一次下来，最小的数就在第一位了，第二次循环跑一次也一样，如此类推，直到所有的数据排序完成。</p>
+</li>
+<li><p>Js代码实现</p>
+</li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span><span class="params">(arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> l = arr.length,j;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; l ; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>;j &lt; l-i ; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[j - i]) &#123;</span><br><span class="line">                arr[j] = [ arr[j-<span class="number">1</span>] , arr[j-<span class="number">1</span>] = arr[j] ][<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-_u9009_u62E9_u6392_u5E8F"><a href="#2-_u9009_u62E9_u6392_u5E8F" class="headerlink" title="2.选择排序"></a>2.选择排序</h4><ul>
+<li>算法原理</li>
+</ul>
+<ul>
+<li>Js代码实现</li>
+</ul>
+
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/13/Js各种常用算法/" data-id="cim31uvmr001dfrwmqbpgfzvi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/25/Js排序算法/" data-id="cim75qwtm00023bwmurkytece" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
@@ -176,7 +322,7 @@
   
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Js各种常用算法" data-title="Js实现常用算法" data-url="http://jypblue.github.io/2016/03/13/Js各种常用算法/"></div>
+    <div class="ds-thread" data-thread-key="post-Js排序算法" data-title="Js排序算法" data-url="http://jypblue.github.io/2016/03/25/Js排序算法/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -215,20 +361,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/16/Css实现多种图形/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <p class="article-nav-title">
-        
-          Css实现多种图形
-        
-      </p>
-      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2016/03/12/上海世纪公园/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/22/gulp实现配置Es6及sass环境/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
-      <p class="article-nav-title">上海世纪公园之行</p>
+      <p class="article-nav-title">gulp配置Es6及sass环境</p>
       <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
     </a>
   
@@ -242,6 +378,26 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2016/03/25/Js排序算法/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png
+)" alt="Js排序算法" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a></p>
+              <p class="item-title"><a href="/2016/03/25/Js排序算法/" class="title">Js排序算法</a></p>
+              <p class="item-date"><time datetime="2016-03-25T03:15:46.000Z" itemprop="datePublished">2016-03-25</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -319,25 +475,6 @@
               <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
               <p class="item-title"><a href="/2016/03/16/H5开发遇到的一些坑/" class="title">H5开发遇到的一些坑</a></p>
               <p class="item-date"><time datetime="2016-03-16T07:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/03/16/Css实现多种图形/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Css3/">Css3</a></p>
-              <p class="item-title"><a href="/2016/03/16/Css实现多种图形/" class="title">Css实现多种图形</a></p>
-              <p class="item-date"><time datetime="2016-03-16T03:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
             </div>
           </li>
         
