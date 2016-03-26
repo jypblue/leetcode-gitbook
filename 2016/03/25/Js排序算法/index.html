@@ -46,7 +46,7 @@ O(">
 冒泡排序
 O(">
 <meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png">
-<meta property="og:updated_time" content="2016-03-25T08:41:59.000Z">
+<meta property="og:updated_time" content="2016-03-26T07:29:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js排序算法">
 <meta name="twitter:description" content="虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。
@@ -228,66 +228,66 @@ O(">
 </tr>
 <tr>
 <td style="text-align:center">选择排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">插入排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">快速排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(n<sup>2</sup>)</td>
+<td style="text-align:center">O(logn)</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">归并排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">堆排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">二叉树排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">稳定</td>
 </tr>
 <tr>
 <td style="text-align:center">希尔排序</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">O(nlogn)</td>
+<td style="text-align:center">O(n<sup>8</sup>)1</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">基数排序</td>
+<td style="text-align:center">O(log<sub>R</sub><sup>B</sup>)</td>
+<td style="text-align:center">O(log<sub>R</sub><sup>B</sup>)</td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">稳定</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
-<td style="text-align:center">Content Cell</td>
+<td style="text-align:center">计数排序</td>
+<td style="text-align:center">O(n+k)</td>
+<td style="text-align:center">O(n+k)</td>
+<td style="text-align:center">O(n+k)</td>
+<td style="text-align:center">稳定</td>
 </tr>
 </tbody>
 </table>
@@ -300,16 +300,42 @@ O(">
 </ul>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span><span class="params">(arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> l = arr.length,j;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; l ; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>;j &lt; l-i ; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[j - i]) &#123;</span><br><span class="line">                arr[j] = [ arr[j-<span class="number">1</span>] , arr[j-<span class="number">1</span>] = arr[j] ][<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-_u9009_u62E9_u6392_u5E8F"><a href="#2-_u9009_u62E9_u6392_u5E8F" class="headerlink" title="2.选择排序"></a>2.选择排序</h4><ul>
-<li>算法原理</li>
+<li><p>算法原理</p>
+<p>  在未排序的数组中找到最小（大）的元素，放在排序数组的起始位置。然后，从剩余未排序的数中继续查找最小（大）的元素，放到已排序的数的末尾。以此类推，直到所有元素均排序完毕。</p>
+</li>
+<li><p>Js代码实现</p>
+</li>
 </ul>
-<ul>
-<li>Js代码实现</li>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectionSort</span><span class="params">(array)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> min;</span><br><span class="line">    <span class="keyword">var</span> l = <span class="keyword">array</span>.length;<span class="comment">//缓存长度</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;<span class="comment">//开始进行循环，一共循环l次，就可以找出l个元素了</span></span><br><span class="line">        min = i;<span class="comment">//假设第一个为最小元素</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; l; j++) &#123;<span class="comment">//从第一个开始循环，遍历</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">array</span>[min] &gt; <span class="keyword">array</span>[j])<span class="comment">//判断之后的是否比前面的小</span></span><br><span class="line">                min = j;<span class="comment">//更新“最小”的下标</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (min != i) &#123;<span class="comment">//这里因为是在同一个数组内进行操作，所以直接交换元素即可。比如数组第一项是i，那么我找出了最小元素为array[min],那么我就需要把这个min跟i交换。以此类推。</span></span><br><span class="line">            <span class="keyword">array</span>[i]= [<span class="keyword">array</span>[min],<span class="keyword">array</span>[min]=<span class="keyword">array</span>[i]][<span class="number">0</span>];<span class="comment">//交换元素</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-_u63D2_u5165_u6392_u5E8F"><a href="#3-_u63D2_u5165_u6392_u5E8F" class="headerlink" title="3.插入排序"></a>3.插入排序</h4><ul>
+<li><p>算法原理</p>
+<p>  将数据分为两部分，有序部分与无序部分。一开始有序部分包含第一个元素，依次将无序部分的元素插入到有序部分，直到所有元素有序。</p>
+</li>
+<li><p>Js代码实现</p>
+</li>
 </ul>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> insertSort(arr) &#123;</span><br><span class="line">    var temp,inner;</span><br><span class="line">    <span class="keyword">for</span>(var <span class="keyword">outer</span> = <span class="number">1</span>;<span class="keyword">outer</span>&lt;=arr.length - <span class="number">1</span>;<span class="keyword">outer</span>++) &#123;</span><br><span class="line">        temp = arr[<span class="keyword">outer</span>];</span><br><span class="line">        inner = <span class="keyword">outer</span>;</span><br><span class="line">        <span class="keyword">while</span>(inner &gt; <span class="number">0</span> &amp;&amp; (arr[inner - <span class="number">1</span> ] &gt;= temp)) &#123;</span><br><span class="line">            arr[inner] = arr[inner - <span class="number">1</span>];</span><br><span class="line">            --inner;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[inner] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-_u5FEB_u901F_u6392_u5E8F"><a href="#4-_u5FEB_u901F_u6392_u5E8F" class="headerlink" title="4.快速排序"></a>4.快速排序</h4><ul>
+<li><p>算法原理</p>
+<p>  通过一次排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序递归进行。最后达到整个数据变成有序序列。</p>
+</li>
+<li><p>Js代码实现</p>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function <span class="built_in">quickSort</span>(arr) &#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.length ==<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">left</span> =[];</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">right</span> = [];</span><br><span class="line">    <span class="keyword">var</span> pivot = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] &lt; pivot)&#123;</span><br><span class="line">            <span class="keyword">left</span>.push(arr[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">right</span>.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">quickSort</span>(<span class="keyword">left</span>).concat(pivot,<span class="built_in">quickSort</span>(<span class="keyword">right</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-_u5F52_u5E76_u6392_u5E8F"><a href="#5-_u5F52_u5E76_u6392_u5E8F" class="headerlink" title="5.归并排序"></a>5.归并排序</h4><ul>
+<li><p>算法原理</p>
+<p>  （假设序列共有n个元素）将序列每相邻两个数字进行归并操作（merge)，形成floor(n/2)个序列，排序后每个序列包含两个元素。将上述序列再次归并，形成floor(n/4)个序列，每个序列包含四个元素。重复以上步骤，直到所有元素排序完毕。</p>
+</li>
+<li><p>Js代码实现    </p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/25/Js排序算法/" data-id="cim75qwtm00023bwmurkytece" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/25/Js排序算法/" data-id="cim8wejk9001dt5wmfuds76ds" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         

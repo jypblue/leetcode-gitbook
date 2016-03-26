@@ -18,7 +18,7 @@
 <meta property="og:description" content="2014年毕业进携程工作后，一开始主要做PC端的前端工作，主要的坑都是IE以及火狐的，而2015年下半年开始负责移动前端工作后，发现出来的坑就层出不穷了。我就列一下这大半年做H5开发遇到的一些坑及对应的解决方案；至于过程就不细说了，主要是通过stackoverflow,知乎，segmentfault,quora,论坛，博客等地方查询到的解决方案。之后如有新的坑会继续追加进来。
 坑1.安卓UC浏览器">
 <meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/pits.jpg">
-<meta property="og:updated_time" content="2016-03-20T11:19:24.000Z">
+<meta property="og:updated_time" content="2016-03-26T07:26:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="H5开发遇到的一些坑">
 <meta name="twitter:description" content="2014年毕业进携程工作后，一开始主要做PC端的前端工作，主要的坑都是IE以及火狐的，而2015年下半年开始负责移动前端工作后，发现出来的坑就层出不穷了。我就列一下这大半年做H5开发遇到的一些坑及对应的解决方案；至于过程就不细说了，主要是通过stackoverflow,知乎，segmentfault,quora,论坛，博客等地方查询到的解决方案。之后如有新的坑会继续追加进来。
@@ -176,11 +176,14 @@
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.height = <span class="built_in">window</span>.innerHeight + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
 <h4 id="u57514-UC_u4E0Bflex_u5E03_u5C40_u884C_u5185_u5143_u7D20_u4E0D_u5360_u4F4D"><a href="#u57514-UC_u4E0Bflex_u5E03_u5C40_u884C_u5185_u5143_u7D20_u4E0D_u5360_u4F4D" class="headerlink" title="坑4.UC下flex布局行内元素不占位"></a>坑4.UC下flex布局行内元素不占位</h4><p><strong>Q:</strong> UC浏览器在利用flex布局亦或者横向占位的时候，如果你不显示设置display:block;以及宽度等属性时候，会与chrome等其它webkit浏览器显示效果不一致。</p>
 <p><strong>S:</strong> 如果使用行内标签那就块级话，宽度也显示写出来就可以解决了。</p>
+<h4 id="u57515-flex_u5E03_u5C40_u5185_u5BB9_u4E0D_u4E00_u81F4_u65E0_u6CD5_u5747_u5206"><a href="#u57515-flex_u5E03_u5C40_u5185_u5BB9_u4E0D_u4E00_u81F4_u65E0_u6CD5_u5747_u5206" class="headerlink" title="坑5.flex布局内容不一致无法均分"></a>坑5.flex布局内容不一致无法均分</h4><p><strong>Q:</strong> 在Android机浏览器下使用flex布局，flex item 等分布局的时候，某一列的数据内容过多的时候，会把它的宽度撑宽，无法做到等分布局。</p>
+<p><strong>S:</strong> 在flex item 代码中加一个width:1%，保证剩余空间相同.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.flex-1</span><span class="rules">&#123;<span class="rule"><span class="attribute">-webkit-box-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">-webkit-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">-ms-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">1%</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
 
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/16/H5开发遇到的一些坑/" data-id="cim75on4q001i1owmrv95dt3x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/16/H5开发遇到的一些坑/" data-id="cim8wejka001it5wmbhxdgwwc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
