@@ -18,7 +18,7 @@
 <meta property="og:description" content="2014年毕业进携程工作后，一开始主要做PC端的前端工作，主要的坑都是IE以及火狐的，而2015年下半年开始负责移动前端工作后，发现出来的坑就层出不穷了。我就列一下这大半年做H5开发遇到的一些坑及对应的解决方案；至于过程就不细说了，主要是通过stackoverflow,知乎，segmentfault,quora,论坛，博客等地方查询到的解决方案。之后如有新的坑会继续追加进来。
 坑1.安卓UC浏览器">
 <meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/pits.jpg">
-<meta property="og:updated_time" content="2016-03-26T07:26:21.000Z">
+<meta property="og:updated_time" content="2016-04-28T10:56:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="H5开发遇到的一些坑">
 <meta name="twitter:description" content="2014年毕业进携程工作后，一开始主要做PC端的前端工作，主要的坑都是IE以及火狐的，而2015年下半年开始负责移动前端工作后，发现出来的坑就层出不穷了。我就列一下这大半年做H5开发遇到的一些坑及对应的解决方案；至于过程就不细说了，主要是通过stackoverflow,知乎，segmentfault,quora,论坛，博客等地方查询到的解决方案。之后如有新的坑会继续追加进来。
@@ -173,11 +173,14 @@
 <h4 id="u57515-flex_u5E03_u5C40_u5185_u5BB9_u4E0D_u4E00_u81F4_u65E0_u6CD5_u5747_u5206"><a href="#u57515-flex_u5E03_u5C40_u5185_u5BB9_u4E0D_u4E00_u81F4_u65E0_u6CD5_u5747_u5206" class="headerlink" title="坑5.flex布局内容不一致无法均分"></a>坑5.flex布局内容不一致无法均分</h4><p><strong>Q:</strong> 在Android机浏览器下使用flex布局，flex item 等分布局的时候，某一列的数据内容过多的时候，会把它的宽度撑宽，无法做到等分布局。</p>
 <p><strong>S:</strong> 在flex item 代码中加一个width:1%，保证剩余空间相同.</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.flex-1</span><span class="rules">&#123;<span class="rule"><span class="attribute">-webkit-box-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">-webkit-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">-ms-flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">flex</span>:<span class="value"><span class="number">1</span></span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">1%</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="u57515-safari_u6D4F_u89C8_u5668_u4E0Binput_5Btype_3D_u201Dpassword_u201D_10_5D_u65E0_u6CD5_u8F93_u5165"><a href="#u57515-safari_u6D4F_u89C8_u5668_u4E0Binput_5Btype_3D_u201Dpassword_u201D_10_5D_u65E0_u6CD5_u8F93_u5165" class="headerlink" title="坑5.safari浏览器下input[type=”password”]无法输入"></a>坑5.safari浏览器下input[type=”password”]无法输入</h4><p><strong>Q:</strong> 在hybrid开发webview中，ios系统下input[password]输入框无法输入（但是键盘可以弹起,输入框无法聚焦）</p>
+<p><strong>S:</strong> 是css全局设定-webkit-user-select:none导致。所以在input和textarea标签重新设置该属性即可：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">input</span>,<span class="tag">textarea</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> auto <span class="important">!important</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 
       </div>
       <footer class="article-footer">
         <!--
-        <a data-url="http://jypblue.github.io/2016/03/16/H5开发遇到的一些坑/" data-id="cinjxqr3b001kbxwmfrmm2uz6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+        <a data-url="http://jypblue.github.io/2016/03/16/H5开发遇到的一些坑/" data-id="cink6eglq001kb3wmze3ongro" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
         -->
         
         
@@ -261,6 +264,26 @@
             
             <div class="item-thumbnail">
               
+<a href="/2016/04/30/前端面试题目集合/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg
+)" alt="前端面试题目集合" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
+              <p class="item-title"><a href="/2016/04/30/前端面试题目集合/" class="title">前端面试题目集合</a></p>
+              <p class="item-date"><time datetime="2016-04-30T02:10:46.000Z" itemprop="datePublished">2016-04-30</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
 <a href="/2016/04/25/Js排序算法/" class="thumbnail">
   
     <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png
@@ -274,6 +297,26 @@
               <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a></p>
               <p class="item-title"><a href="/2016/04/25/Js排序算法/" class="title">Js排序算法</a></p>
               <p class="item-date"><time datetime="2016-04-25T03:15:46.000Z" itemprop="datePublished">2016-04-25</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              
+<a href="/2016/04/12/Node微信开发（一）：环境配置/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg
+)" alt="Node微信开发（一）：环境配置" class="thumbnail-image"></span>
+  
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Node/">Node</a></p>
+              <p class="item-title"><a href="/2016/04/12/Node微信开发（一）：环境配置/" class="title">Node微信开发（一）：环境配置</a></p>
+              <p class="item-date"><time datetime="2016-04-12T12:15:51.000Z" itemprop="datePublished">2016-04-12</time></p>
             </div>
           </li>
         
@@ -317,45 +360,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/03/20/Es6实现二叉树/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Es6/">Es6</a></p>
-              <p class="item-title"><a href="/2016/03/20/Es6实现二叉树/" class="title">Es6实现二叉树</a></p>
-              <p class="item-date"><time datetime="2016-03-20T07:05:46.000Z" itemprop="datePublished">2016-03-20</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/03/16/H5开发遇到的一些坑/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/pits.jpg
-)" alt="H5开发遇到的一些坑" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2016/03/16/H5开发遇到的一些坑/" class="title">H5开发遇到的一些坑</a></p>
-              <p class="item-date"><time datetime="2016-03-16T07:05:46.000Z" itemprop="datePublished">2016-03-16</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -375,7 +379,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
