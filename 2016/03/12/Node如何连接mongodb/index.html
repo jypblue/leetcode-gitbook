@@ -3,23 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Node微信开发（一）：环境配置 | 虾米爱吃鱼</title>
+    <title>Node如何连接Mongodb | 虾米爱吃鱼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Node,weixin" />
+        <meta name="keywords" content="Node,Mongodb" />
     
-    <meta name="description" content="1.">
+    <meta name="description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node微信开发（一）：环境配置">
-<meta property="og:url" content="http://jypblue.github.io/2016/04/12/Node微信开发（一）：环境配置/index.html">
+<meta property="og:title" content="Node如何连接Mongodb">
+<meta property="og:url" content="http://jypblue.github.io/2016/03/12/Node如何连接mongodb/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
-<meta property="og:description" content="1.">
-<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/weixindev1.jpg">
-<meta property="og:updated_time" content="2016-06-21T07:41:07.000Z">
+<meta property="og:description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#">
+<meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/mongoose.png">
+<meta property="og:updated_time" content="2016-06-21T07:46:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node微信开发（一）：环境配置">
-<meta name="twitter:description" content="1.">
-<meta name="twitter:image" content="http://7xrkii.com1.z0.glb.clouddn.com/weixindev1.jpg">
+<meta name="twitter:title" content="Node如何连接Mongodb">
+<meta name="twitter:description" content="今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。
+1.安装mongodb首先我们进入mongodb官网https://www.mongodb.org/downloads#">
+<meta name="twitter:image" content="http://7xrkii.com1.z0.glb.clouddn.com/mongoose.png">
     
 
     
@@ -133,37 +136,64 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Node微信开发（一）：环境配置" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Node如何连接mongodb" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Node微信开发（一）：环境配置
+        Node如何连接Mongodb
         </h1>
     
 
             </header>
         
         <div class="article-subtitle">
-            <a href="/2016/04/12/Node微信开发（一）：环境配置/" class="article-date">
-    <time datetime="2016-04-12T12:15:51.000Z" itemprop="datePublished">2016-04-12</time>
+            <a href="/2016/03/12/Node如何连接mongodb/" class="article-date">
+    <time datetime="2016-03-12T08:15:51.000Z" itemprop="datePublished">2016-03-12</time>
 </a>
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/weixin/">weixin</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mongodb/">Mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/weixindev1.jpg" alt=""></p>
-<h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4>
+            <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/mongoose.png" alt=""></p>
+<p>今年初开始下定决心开始学习nodejs，之前断断续续看了一些node的api，但是一直没有一个总体的认识，于是买了书查看网上教程先跟着别人的教程跑通一个web站点以此作为对node总体的一个了解，记录的第一个简单知识点就是利用mongoose这个模块连接mongodb数据库。</p>
+<h4 id="1-安装mongodb"><a href="#1-安装mongodb" class="headerlink" title="1.安装mongodb"></a>1.安装mongodb</h4><p>首先我们进入mongodb官网<a href="https://www.mongodb.org/downloads#production" target="_blank" rel="external">https://www.mongodb.org/downloads#production</a> 选择自己需要的版本下载，然后直接点击安装即可。亦或者我们直接通过Homebrew进行安装，直接打开shell终端,运行命令行</p>
+<p>brew install mongodb </p>
+<h4 id="2-启动mongodb"><a href="#2-启动mongodb" class="headerlink" title="2.启动mongodb"></a>2.启动mongodb</h4><p>安装完成后我们需要启动mongodb数据库才能进行连接。继续运行命令行</p>
+<p>mongod –config /usr/local/etc/mongod.conf</p>
+<h4 id="3-连接mongodb"><a href="#3-连接mongodb" class="headerlink" title="3.连接mongodb"></a>3.连接mongodb</h4><p>连接mongodb,直接shell终端输入 </p>
+<p>mongo</p>
+<p>就进入mongodb操作界面，就可以使用mongodb语法增删修改数据库了。另外还有一个mongodb可视化管理工具Robomongo可以使用，跨平台的。用起来还是蛮方便的。</p>
+<h4 id="4-利用mongoose在node项目中操纵mongodb"><a href="#4-利用mongoose在node项目中操纵mongodb" class="headerlink" title="4.利用mongoose在node项目中操纵mongodb"></a>4.利用mongoose在node项目中操纵mongodb</h4><p>首先我们需要下载mongoose模块，直接在你的项目文件夹下运行</p>
+<p>npm install mongoose –save-dev</p>
+<p>就安装好了。然后直接根据官网的demo代码来做<br>1.引入mongoose，连接mongodb</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</span><br></pre></td></tr></table></figure>
+<p>2.操作mongodb<br><img src="http://7xrkii.com1.z0.glb.clouddn.com/mongomod.png" alt=""></p>
+<p>mongoose的数据模型设计为Schema、Model、Documents三者。</p>
+<ul>
+<li>Schema 模式定义</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">  title:  <span class="built_in">String</span>,</span><br><span class="line">  author: <span class="built_in">String</span>,</span><br><span class="line">  body:   <span class="built_in">String</span>,</span><br><span class="line">  comments: [&#123; body: <span class="built_in">String</span>, date: <span class="built_in">Date</span> &#125;],</span><br><span class="line">  date: &#123; <span class="keyword">type</span>: <span class="built_in">Date</span>, <span class="keyword">default</span>: <span class="built_in">Date</span>.now &#125;,</span><br><span class="line">  hidden: <span class="built_in">Boolean</span>,</span><br><span class="line">  meta: &#123;</span><br><span class="line">    votes: <span class="built_in">Number</span>,</span><br><span class="line">    favs:  <span class="built_in">Number</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Model 编译模型</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="built_in">require</span>(<span class="string">'../schemas/blog'</span>);</span><br><span class="line"><span class="keyword">var</span> Blog = mongoose.model(<span class="string">'Blog'</span>, blogSchema);</span><br><span class="line"><span class="built_in">module</span>.exports = Blog;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Documents 文档实例化</li>
+</ul>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var Blog = require(<span class="string">'../models/blog);</span><br><span class="line">var small = new Blog(&#123; size: '</span>small' &#125;);</span><br><span class="line"><span class="comment">//保存</span></span><br><span class="line">Blog.save(<span class="function"><span class="keyword">function</span> <span class="params">(err)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// saved!</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// or 增</span></span><br><span class="line">Blog.create(&#123; <span class="built_in">size</span>: <span class="string">'small'</span> &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(err, small)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// saved!</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//查询</span></span><br><span class="line">Blog.find(&#123; <span class="built_in">size</span>: <span class="string">'small'</span> &#125;).where(<span class="string">'createdDate'</span>).gt(oneYearAgo).<span class="built_in">exec</span>(callback);</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line">Blog.remove(&#123; <span class="built_in">size</span>: <span class="string">'large'</span> &#125;, <span class="function"><span class="keyword">function</span> <span class="params">(err)</span> &#123;</span></span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> handleError(err);</span><br><span class="line">  <span class="comment">// removed!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我的理解就是Schema是组装，定义数据字段的，Model进行数据的编译转化，Documents进行数据的实例化，做到增删改查的操作。</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://jypblue.github.io/2016/04/12/Node微信开发（一）：环境配置/" data-id="cipp5e5sb000dwowmh01sm7rv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jypblue.github.io/2016/03/12/Node如何连接mongodb/" data-id="cipp5e5sa000bwowm9pf6jhv8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -283,20 +313,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/04/25/Js排序算法/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/03/16/Css实现多种图形/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Js排序算法
+            Css实现多种图形
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/03/22/Gulp实现配置Es6及sass环境/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2015/12/18/Retina屏实现1像素/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">gulp配置Es6及sass环境</p>
+        <p class="article-nav-title">Retina屏实现1像素</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -499,7 +529,7 @@
     var disqus_shortname = 'jypblue';
     
     
-    var disqus_url = 'http://jypblue.github.io/2016/04/12/Node微信开发（一）：环境配置/';
+    var disqus_url = 'http://jypblue.github.io/2016/03/12/Node如何连接mongodb/';
     
     (function() {
     var dsq = document.createElement('script');
