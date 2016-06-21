@@ -5,20 +5,16 @@
   
   <title>如何在浏览器实现高斯模糊 | 虾米爱吃鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="keywords" content="Canvas,Css3,Js">
-  
-
   <meta name="description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
  123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
- 但是仅这样">
+ 但是仅这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在浏览器实现高斯模糊">
 <meta property="og:url" content="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
 <meta property="og:description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
  123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
- 但是仅这样">
+ 但是仅这">
 <meta property="og:image" content="http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg">
 <meta property="og:image" content="http://7xpcj0.com1.z0.glb.clouddn.com/blur1.png">
 <meta property="og:image" content="http://7xpcj0.com1.z0.glb.clouddn.com/blur2.png">
@@ -27,159 +23,101 @@
 <meta name="twitter:title" content="如何在浏览器实现高斯模糊">
 <meta name="twitter:description" content="1.css实现高斯模糊css3 blur滤镜实现css代码如下：
  123456.blur&amp;#123;	-webkit-filter: blur(4px); /* Chrome, Opera */     -moz-filter: blur(4px);      -ms-filter: blur(4px);              filter: blur(4px); &amp;#125;
- 但是仅这样">
+ 但是仅这">
+<meta name="twitter:image" content="http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="虾米爱吃鱼" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  
-  
-    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
-  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
 
-
-  
-
-  
-    <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
 </head>
-
 <body>
-  <div id="wrap">
-    <header id="header">
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
   <div id="header-outer" class="outer">
-    <div class="container">
-      <div class="container-inner">
-        <div id="header-title">
-          <h1 class="logo-wrap">
-            <a href="/" class="logo"></a>
-          </h1>
-          
-            <h2 class="subtitle-wrap">
-              <p class="subtitle">前端生活</p>
-            </h2>
-          
-        </div>
-        <div id="header-inner" class="nav-container">
-          <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-          <div class="nav-container-inner">
-            <ul id="main-nav">
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">
-
-                主页
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/FrontEnd/index.html">
-
-                前端
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Javascript/index.html">
-
-                javascript
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Css/index.html">
-
-                css/scss
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Node/index.html">
-
-                node
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Es6/index.html">
-
-                es6
-
-                </a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/categories/Tool/index.html">
-
-                工具
-
-                </a></li>
-              
-            </ul>
-            <nav id="sub-nav">
-              <div id="search-form-wrap">
-                
-                  <div class="search-form">
-                    <input type="text" class="st-default-search-input search-form-input" placeholder="搜索">
-                  </div>
-                
-              </div>
-            </nav>
-          </div>
-        </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">虾米爱吃鱼</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">码农，程序猿，前端工程师</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jypblue.github.io"></form>
       </div>
     </div>
   </div>
 </header>
+      <div class="outer">
+        <section id="main"><article id="post-如何在浏览器上实现高斯模糊效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="article-date">
+  <time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a>
+  </div>
 
-    <div class="container">
-      <div class="main-body container-inner">
-        <div class="main-body-inner">
-          <section id="main">
-            <div class="main-body-header">
-
-              <h1 class="header"><a class="page-title-link" href="/categories/FrontEnd/">FrontEnd</a></h1>
-            </div>
-            <div class="main-body-content">
-              
-  <article id="post-如何在浏览器上实现高斯模糊效果" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-      <!--  -->
-      
-        <header class="article-header">
-          
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 class="article-title" itemprop="name">
       如何在浏览器实现高斯模糊
     </h1>
   
 
-        </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-      <p class="article-byline">
-        <a href="/2015/12/18/如何在浏览器上实现高斯模糊效果/" class="article-date">
-  <time datetime="2015-12-18T03:05:46.000Z" itemprop="datePublished">2015-12-18</time>
-</a>
-      </p>
-      <div class="article-entry" itemprop="articleBody">
         <p><img src="http://7xrkii.com1.z0.glb.clouddn.com/GaussianBlur.jpg" alt=""></p>
-<h2 id="1-css_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA"><a href="#1-css_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA" class="headerlink" title="1.css实现高斯模糊"></a>1.css实现高斯模糊</h2><h4 id="css3_blur_u6EE4_u955C_u5B9E_u73B0"><a href="#css3_blur_u6EE4_u955C_u5B9E_u73B0" class="headerlink" title="css3 blur滤镜实现"></a>css3 blur滤镜实现</h4><p>css代码如下：</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.blur</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">     <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;</span><br><span class="line">      <span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>;    </span><br><span class="line">          <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">4px</span>)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-css实现高斯模糊"><a href="#1-css实现高斯模糊" class="headerlink" title="1.css实现高斯模糊"></a>1.css实现高斯模糊</h2><h4 id="css3-blur滤镜实现"><a href="#css3-blur滤镜实现" class="headerlink" title="css3 blur滤镜实现"></a>css3 blur滤镜实现</h4><p>css代码如下：</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blur</span>&#123;</span><br><span class="line">	<span class="attribute">-webkit-filter</span>: <span class="built_in">blur</span>(4px); <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">     <span class="attribute">-moz-filter</span>: <span class="built_in">blur</span>(4px);</span><br><span class="line">      <span class="attribute">-ms-filter</span>: <span class="built_in">blur</span>(4px);    </span><br><span class="line">          <span class="attribute">filter</span>: <span class="built_in">blur</span>(4px); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 但是仅这样做，在浏览器显示会出现白边的问题，如下图：</p>
 <p> <img src="http://7xpcj0.com1.z0.glb.clouddn.com/blur1.png" alt="blur1"></p>
 <p> 所以需要在此基础上添加没有blur样式图片盖掉白边：</p>
- <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1"</span>/&gt;</span><br><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1"</span> class=<span class="string">"blur"</span>/&gt;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">img</span> src=<span class="string">"blur1"</span>/&gt;</span><br><span class="line">&lt;<span class="selector-tag">img</span> src=<span class="string">"blur1"</span> class=<span class="string">"blur"</span>/&gt;</span><br></pre></td></tr></table></figure>
 <p> 这样显示就正常了：</p>
 <p> <img src="http://7xpcj0.com1.z0.glb.clouddn.com/blur2.png" alt="blur2"></p>
 <p> 如果需要在PC端实现高斯模糊效果，则需要兼容IE及Firefox等浏览器，则只需添加IE filter滤镜和svg文件就好了：</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 	<span class="class">.blur</span><span class="rules">&#123;</span><br><span class="line"> 		<span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">url</span>(blur.svg<span class="hexcolor">#b</span>lur)</span></span>;  <span class="comment">/* FireFox, Chrome, Opera */</span></span><br><span class="line">	    <span class="rule"><span class="attribute">-webkit-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>; <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">    	   <span class="rule"><span class="attribute">-moz-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;</span><br><span class="line">        	<span class="rule"><span class="attribute">-ms-filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;    </span><br><span class="line">            	<span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">10px</span>)</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Blur</span>(PixelRadius=<span class="number">10</span>, MakeShadow=false)</span></span>; <span class="comment">/* IE6~IE9 */</span></span><br><span class="line"> 	&#125;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 	<span class="selector-class">.blur</span>&#123;</span><br><span class="line"> 		<span class="attribute">filter</span>: <span class="built_in">url</span>(blur.svg#blur);  <span class="comment">/* FireFox, Chrome, Opera */</span></span><br><span class="line">	    <span class="attribute">-webkit-filter</span>: <span class="built_in">blur</span>(10px); <span class="comment">/* Chrome, Opera */</span></span><br><span class="line">    	   <span class="attribute">-moz-filter</span>: <span class="built_in">blur</span>(10px);</span><br><span class="line">        	<span class="attribute">-ms-filter</span>: <span class="built_in">blur</span>(10px);    </span><br><span class="line">            	<span class="attribute">filter</span>: <span class="built_in">blur</span>(10px);</span><br><span class="line"><span class="attribute">filter</span>: progid:DXImageTransform.Microsoft.<span class="built_in">Blur</span>(PixelRadius=10, MakeShadow=false); <span class="comment">/* IE6~IE9 */</span></span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
 <p> 至此利用css实现了兼容性较好的高斯模糊效果。</p>
 <hr>
 <p> 注：<strong><em>android下UC浏览器不支持css3属性filter</em></strong></p>
 <hr>
-<h2 id="2-canvas_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA"><a href="#2-canvas_u5B9E_u73B0_u9AD8_u65AF_u6A21_u7CCA" class="headerlink" title="2.canvas实现高斯模糊"></a>2.canvas实现高斯模糊</h2><h4 id="u5229_u7528StackBlur-js_u5E93_u5B9E_u73B0"><a href="#u5229_u7528StackBlur-js_u5E93_u5B9E_u73B0" class="headerlink" title="利用StackBlur.js库实现"></a>利用StackBlur.js库实现</h4><p>该js库的demo地址：<a href="http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html" target="_blank" rel="external">http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html</a></p>
+<h2 id="2-canvas实现高斯模糊"><a href="#2-canvas实现高斯模糊" class="headerlink" title="2.canvas实现高斯模糊"></a>2.canvas实现高斯模糊</h2><h4 id="利用StackBlur-js库实现"><a href="#利用StackBlur-js库实现" class="headerlink" title="利用StackBlur.js库实现"></a>利用StackBlur.js库实现</h4><p>该js库的demo地址：<a href="http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html" target="_blank" rel="external">http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html</a></p>
 <p>该方法可以实现图片的高斯模糊效果，不依赖其他任何JS框架，一般用法如下：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackBlurImage<span class="list">( <span class="keyword">sourceImageID</span>, targetCanvasID, radius, blurAlphaChannel )</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackBlurImage( <span class="name">sourceImageID</span>, targetCanvasID, radius, blurAlphaChannel )<span class="comment">;</span></span><br></pre></td></tr></table></figure>
 <p>其中：</p>
 <ul>
 <li>sourceImageID表示要模糊的图片的id, 默认这个图片要隐藏；</li>
@@ -188,305 +126,148 @@
 <li>blurAlphaChannel为布尔属性，表示aplha透明通道是否要模糊，true表示要模糊。</li>
 </ul>
 <p>CSS代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.blur</span> <span class="rules">&#123;		</span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> progid:DXImageTransform.Microsoft.<span class="function">Blur</span>(PixelRadius=<span class="number">10</span>, MakeShadow=false)</span></span>; <span class="comment">/* IE6~IE9 */</span></span><br><span class="line">&#125;</span></span><br><span class="line"><span class="pseudo">:root</span> <span class="class">.blur</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>; <span class="comment">/* IE9+, Firefox, Chrome, Opera - hidden */</span></span><br><span class="line">    <span class="rule"><span class="attribute">filter</span>:<span class="value"> none</span></span>; <span class="comment">/* no IE9 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blur</span> &#123;		</span><br><span class="line">    <span class="attribute">filter</span>: progid:DXImageTransform.Microsoft.<span class="built_in">Blur</span>(PixelRadius=10, MakeShadow=false); <span class="comment">/* IE6~IE9 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-pseudo">:root</span> <span class="selector-class">.blur</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none; <span class="comment">/* IE9+, Firefox, Chrome, Opera - hidden */</span></span><br><span class="line">    <span class="attribute">filter</span>: none; <span class="comment">/* no IE9 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>HTML代码：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1.jpg"</span> /&gt;</span><br><span class="line">&lt;<span class="tag">img</span> src=<span class="string">"blur1.jpg"</span> id=<span class="string">"blur"</span> class=<span class="string">"blur"</span> /&gt;</span><br><span class="line">&lt;<span class="tag">canvas</span> id=<span class="string">"canvas"</span> <span class="attribute">width</span>=<span class="string">"463"</span> <span class="attribute">height</span>=<span class="string">"291"</span>&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">img</span> src=<span class="string">"blur1.jpg"</span> /&gt;</span><br><span class="line">&lt;<span class="selector-tag">img</span> src=<span class="string">"blur1.jpg"</span> id=<span class="string">"blur"</span> class=<span class="string">"blur"</span> /&gt;</span><br><span class="line">&lt;<span class="selector-tag">canvas</span> id=<span class="string">"canvas"</span> <span class="attribute">width</span>=<span class="string">"463"</span> height=<span class="string">"291"</span>&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
 <p>JS代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackBlurImage( <span class="string">"blur"</span>, <span class="string">"canvas"</span>, <span class="number">20</span>, <span class="literal">false</span> );</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stackBlurImage( <span class="string">"blur"</span>, <span class="string">"canvas"</span>, <span class="number">20</span>, <span class="literal">false</span> );</span><br></pre></td></tr></table></figure>
 <p>以上在pc浏览器也实现了兼容性较好的高斯模糊效果。</p>
-<h2 id="u9AD8_u65AF_u6A21_u7CCA_u6548_u679C_u6211_u4E3B_u8981_u8FD8_u662F_u5E94_u7528_u5728_u79FB_u52A8_u7AEF_uFF0C_u6240_u4EE5_u53EA_u4F7F_u7528_u4E86css3_u7684_u5199_u6CD5_u5C31_u57FA_u672C_u53EF_u4EE5_u5B9E_u73B0_u6BDB_u73BB_u7483_u7684_u6A21_u7CCA_u6548_u679C_uFF0C_u6EE1_u8DB3_u9700_u6C42_u3002"><a href="#u9AD8_u65AF_u6A21_u7CCA_u6548_u679C_u6211_u4E3B_u8981_u8FD8_u662F_u5E94_u7528_u5728_u79FB_u52A8_u7AEF_uFF0C_u6240_u4EE5_u53EA_u4F7F_u7528_u4E86css3_u7684_u5199_u6CD5_u5C31_u57FA_u672C_u53EF_u4EE5_u5B9E_u73B0_u6BDB_u73BB_u7483_u7684_u6A21_u7CCA_u6548_u679C_uFF0C_u6EE1_u8DB3_u9700_u6C42_u3002" class="headerlink" title="高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。"></a>高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。</h2>
-      </div>
-      <footer class="article-footer">
-        <!--
-        <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="cipoww2cp000gj4wmngtk6sc2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-        -->
-        
-        
+<h2 id="高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。"><a href="#高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。" class="headerlink" title="高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。"></a>高斯模糊效果我主要还是应用在移动端，所以只使用了css3的写法就基本可以实现毛玻璃的模糊效果，满足需求。</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/" data-id="cipp17vv5000ssowm2q59w6yb" class="article-share-link">Share</a>
+      
+      
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canvas/">Canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css3/">Css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li></ul>
 
-      </footer>
-    </div>
-  </article>
-  
-  
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-如何在浏览器上实现高斯模糊效果" data-title="如何在浏览器实现高斯模糊" data-url="http://jypblue.github.io/2015/12/18/如何在浏览器上实现高斯模糊效果/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'jypblue'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-  
-
-
-            </div>
-          </section>
-          <aside id="sidebar">
-  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-  <div class="sidebar-top">
-    <p>关注我 :</p>
-    <ul class="social-links">
-      
-        <li><a class="social-tooltip" title="github" href="https://github.com/jypblue/" target="_blank"><i class="icon fa fa-github"></i></a></li>
-      
-        <li><a class="social-tooltip" title="weibo" href="http://weibo.com/1907193411/" target="_blank"><i class="icon fa fa-weibo"></i></a></li>
-      
-        <li><a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100010462784322" target="_blank"><i class="icon fa fa-facebook"></i></a></li>
-      
-    </ul>
+    </footer>
   </div>
   
     
 <nav id="article-nav">
   
     <a href="/2015/12/18/Retina屏实现1像素/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <p class="article-nav-title">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
           Retina屏实现1像素
         
-      </p>
-      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+      </div>
     </a>
   
+  
+    <a href="/2015/12/18/移动布局知识要点/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">移动布局知识要点</div>
+    </a>
   
 </nav>
 
   
-  <div class="widgets-container">
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
     
-      
   <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/04/30/前端面试题目集合/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/frontendqa.jpg
-)" alt="前端面试题目集合" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2016/04/30/前端面试题目集合/" class="title">前端面试题目集合</a></p>
-              <p class="item-date"><time datetime="2016-04-30T02:10:46.000Z" itemprop="datePublished">2016-04-30</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/04/25/Js排序算法/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png
-)" alt="Js排序算法" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a></p>
-              <p class="item-title"><a href="/2016/04/25/Js排序算法/" class="title">Js排序算法</a></p>
-              <p class="item-date"><time datetime="2016-04-25T03:15:46.000Z" itemprop="datePublished">2016-04-25</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/04/12/Node微信开发（一）：环境配置/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/weixindev1.jpg
-)" alt="Node微信开发（一）：环境配置" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Node/">Node</a></p>
-              <p class="item-title"><a href="/2016/04/12/Node微信开发（一）：环境配置/" class="title">Node微信开发（一）：环境配置</a></p>
-              <p class="item-date"><time datetime="2016-04-12T12:15:51.000Z" itemprop="datePublished">2016-04-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/03/22/Gulp实现配置Es6及sass环境/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/gulpes6sass.jpg
-)" alt="gulp配置Es6及sass环境" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2016/03/22/Gulp实现配置Es6及sass环境/" class="title">gulp配置Es6及sass环境</a></p>
-              <p class="item-date"><time datetime="2016-03-22T08:25:46.000Z" itemprop="datePublished">2016-03-22</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              
-<a href="/2016/03/21/Gulp实现前端资源压缩/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/gulpzipres.jpg
-)" alt="gulp实现前端资源压缩" class="thumbnail-image"></span>
-  
-</a>
-
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a></p>
-              <p class="item-title"><a href="/2016/03/21/Gulp实现前端资源压缩/" class="title">gulp实现前端资源压缩</a></p>
-              <p class="item-date"><time datetime="2016-03-21T08:15:46.000Z" itemprop="datePublished">2016-03-21</time></p>
-            </div>
-          </li>
-        
-      </ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css/">Css</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Es6/">Es6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
+  
     
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css/">Css</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Es6/">Es6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/FrontEnd/">FrontEnd</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">标签</h3>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/">Css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css3/">Css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Es6/">Es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongodb/">Mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weixin/">weixin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/坑/">坑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动开发/">移动开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
-
+  
     
-      
-  <div class="widget-wrap widget-float">
-    <h3 class="widget-title">标签云</h3>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Css/" style="font-size: 20px;">Css</a> <a href="/tags/Css3/" style="font-size: 10px;">Css3</a> <a href="/tags/Es6/" style="font-size: 10px;">Es6</a> <a href="/tags/Html/" style="font-size: 15px;">Html</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Js/" style="font-size: 20px;">Js</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/Node/" style="font-size: 15px;">Node</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 15px;">gulp</a> <a href="/tags/weixin/" style="font-size: 10px;">weixin</a> <a href="/tags/坑/" style="font-size: 10px;">坑</a> <a href="/tags/移动开发/" style="font-size: 10px;">移动开发</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a>
     </div>
   </div>
 
-
+  
     
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">链接</h3>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="https://github.com/jypblue/">github</a>
+            <a href="/2016/06/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/30/前端面试题目集合/">前端面试题目集合</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/25/Js排序算法/">Js排序算法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/12/Node微信开发（一）：环境配置/">Node微信开发（一）：环境配置</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/22/Gulp实现配置Es6及sass环境/">gulp配置Es6及sass环境</a>
           </li>
         
       </ul>
     </div>
   </div>
 
-
-    
-  </div>
-</aside>
-        </div>
-      </div>
-    </div>
-    <footer id="footer">
   
-  <div class="container">
-    <div class="container-inner">
-      <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-      <div class="credit">
-        <h1 class="logo-wrap">
-          <a href="/" class="logo"></a>
-        </h1>
-        <p>&copy; 2016 jachin</p>
-        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+</aside>
+        
       </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Jachin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
-
-
-
-
-
-
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-
-  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-
-  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
-  <script src="/scrollLoading/main.js" type="text/javascript"></script>
-
-
-
-  <script type="text/javascript">
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-    _st('install','hYojco7KxRQFpPK3eFyH','2.0.0');
-  </script>
-
-
-<script src="/js/html-patch.js" type="text/javascript"></script>
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

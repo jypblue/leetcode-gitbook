@@ -1,7 +1,34 @@
 (function($){
-  // Nav bar toggle
-  $('#main-nav-toggle').on('click', function(){
-    $('.nav-container-inner').slideToggle();
+  // Search
+  var $searchWrap = $('#search-form-wrap'),
+    isSearchAnim = false,
+    searchAnimDuration = 200;
+
+  var startSearchAnim = function(){
+    isSearchAnim = true;
+  };
+
+  var stopSearchAnim = function(callback){
+    setTimeout(function(){
+      isSearchAnim = false;
+      callback && callback();
+    }, searchAnimDuration);
+  };
+
+  $('#nav-search-btn').on('click', function(){
+    if (isSearchAnim) return;
+
+    startSearchAnim();
+    $searchWrap.addClass('on');
+    stopSearchAnim(function(){
+      $('.search-form-input').focus();
+    });
+  });
+
+  $('.search-form-input').on('blur', function(){
+    startSearchAnim();
+    $searchWrap.removeClass('on');
+    stopSearchAnim();
   });
 
   // Share
@@ -24,7 +51,6 @@
         return;
       }
     } else {
-      // 修改分享地址的地方
       var html = [
         '<div id="' + id + '" class="article-share-box">',
           '<input class="article-share-input" value="' + url + '">',
@@ -80,8 +106,32 @@
     $('.fancybox').fancybox();
   }
 
-  //Back to top
-  $("#back-to-top").on('click', function(){
-    $('body,html').animate({scrollTop:0}, 600);
+  // Mobile nav
+  var $container = $('#container'),
+    isMobileNavAnim = false,
+    mobileNavAnimDuration = 200;
+
+  var startMobileNavAnim = function(){
+    isMobileNavAnim = true;
+  };
+
+  var stopMobileNavAnim = function(){
+    setTimeout(function(){
+      isMobileNavAnim = false;
+    }, mobileNavAnimDuration);
+  }
+
+  $('#main-nav-toggle').on('click', function(){
+    if (isMobileNavAnim) return;
+
+    startMobileNavAnim();
+    $container.toggleClass('mobile-nav-on');
+    stopMobileNavAnim();
+  });
+
+  $('#wrap').on('click', function(){
+    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+
+    $container.removeClass('mobile-nav-on');
   });
 })(jQuery);
