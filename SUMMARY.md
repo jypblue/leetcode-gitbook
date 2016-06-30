@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
-   * 1. Two Sum 
+* [Array](chapter1.md)
+   
 
