@@ -6,6 +6,7 @@
 * [3. Longest Substring Without Repeating Characters](3. Longest Substring Without Repeating Characters.md)
 * [4. Median of Two Sorted Arrays](4. Median of Two Sorted Arrays.md)
 * [5. Longest Palindromic Substring](5. Longest Palindromic Substring.md)
-* [6. ZigZag Conversion](6. ZigZag Conversion.md)
+* [6. ZigZag Conversion](6_zigzag_conversionmd.md)
 * [7. Reverse Integer](7. Reverse Integer.md)
 * [8. String to Integer (atoi)](8. String to Integer.md)
+
