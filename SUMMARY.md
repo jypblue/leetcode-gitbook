@@ -8,4 +8,4 @@
 * [5. Longest Palindromic Substring](5. Longest Palindromic Substring.md)
 * [6. ZigZag Conversion](6. ZigZag Conversion.md)
 * [7. Reverse Integer](7. Reverse Integer.md)
-
+* [8. String to Integer (atoi)](8. String to Integer (atoi).md)
