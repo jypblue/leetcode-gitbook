@@ -12,5 +12,5 @@
 * [14. Longest Common Prefix](14. Longest Common Prefix.md)
 * [39. Combination Sum](39. Combination Sum.md)
 * [70. Climbing Stairs](70. Climbing Stairs.md)
-* 77. Combinations
+* [77. Combinations](77. Combinations.md)
 
