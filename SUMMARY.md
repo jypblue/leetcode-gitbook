@@ -11,5 +11,5 @@
 * [8. String to Integer (atoi)](8. String to Integer.md)
 * [14. Longest Common Prefix](14. Longest Common Prefix.md)
 * [39. Combination Sum](39. Combination Sum.md)
-* 70. Climbing Stairs
+* [70. Climbing Stairs](70. Climbing Stairs.md)
 
