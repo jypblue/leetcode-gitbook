@@ -22,7 +22,7 @@
 本题跟77. Combinations题很类似,总体方法基本一致。对于给定字符串用DFS层层遍历，唯一的区别在于本题多了一个回文的判断。
 
 ##### 思路：
-1. 主体思路见<a href="https://jypblue.gitbooks.io/leetcode/content/51-100/77.Combinations.html">77. Combinations</a>
+1. 主体思路见 <a href="https://jypblue.gitbooks.io/leetcode/content/51-100/77.Combinations.html">77. Combinations</a>
 2. 回文判断（就是比较字符串中的首尾对应字符是否一致）
 
 ##### Js实现：
