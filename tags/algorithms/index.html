@@ -3,18 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>about | 虾米爱吃鱼</title>
+    <title>标签：: algorithms | 虾米爱吃鱼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://jypblue.github.io/about/index.html">
+<meta property="og:title" content="虾米爱吃鱼">
+<meta property="og:url" content="http://jypblue.github.io/tags/algorithms/index.html">
 <meta property="og:site_name" content="虾米爱吃鱼">
 <meta property="og:description">
-<meta property="og:updated_time" content="2016-06-27T08:36:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="虾米爱吃鱼">
 <meta name="twitter:description">
     
 
@@ -125,110 +124,89 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/about/index.html">about</em>
+    <i class="icon fa fa-tag"></i>标签：: <em>algorithms</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/04/25/Js排序算法/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xrkii.com1.z0.glb.clouddn.com/JsSortAlgt.png)" alt="Js排序算法" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-url="http://jypblue.github.io/2016/04/25/Js排序算法/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/FrontEnd/">FrontEnd</a>
+            </p>
+            <p class="date"><time datetime="2016-04-25T03:15:46.000Z" itemprop="datePublished">2016-04-25</time></p>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        about
+        <a href="/2016/04/25/Js排序算法/">Js排序算法</a>
         </h1>
     
 
-            </header>
-        
-        <div class="article-subtitle">
-            <a href="/about/index.html" class="article-date">
-    <time datetime="2015-12-17T10:18:45.000Z" itemprop="datePublished">2015-12-17</time>
-</a>
+        <p class="article-excerpt">
             
-        </div>
-        <div class="article-entry" itemprop="articleBody">
-            
-        </div>
-        <footer class="article-footer">
-            
+虽然一般的前端开发，实际工作中应用到算法的情况比较少，但是呢不管是前端还是后端都是程序员，都应该对常用算法，数据结构有一定的了解及掌握，知道如何应用到自身所擅长的语言中，下面我将介绍一下常用排序算法有关原理，以及在Javascript语言的具体实现。
+首先列一下各种排序算法的时间复杂度，空间复杂度及稳定性：
 
 
 
-    <a data-url="http://jypblue.github.io/about/index.html" data-id="ciq7waenh001q1dwmc85jg426" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
+排序算法
+平均时间复杂度
+最坏时间复杂度
+空间复杂度
+稳定性
 
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
 
-            if ($('#' + id).length) {
-                box = $('#' + id);
 
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
 
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+冒泡排序
+O
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
+
 
                         </div>
                     </section>
@@ -469,13 +447,11 @@
     var disqus_shortname = 'jypblue';
     
     
-    var disqus_url = 'http://jypblue.github.io/about/index.html';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
