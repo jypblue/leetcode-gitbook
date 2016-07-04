@@ -13,5 +13,5 @@
 * [39. Combination Sum](1-50/39. Combination Sum.md)
 * [70. Climbing Stairs](51-100/70. Climbing Stairs.md)
 * [77. Combinations](51-100/77. Combinations.md)
-* 100. Same Tree
+* [100. Same Tree](51-100/100. Same Tree.md)
 
