@@ -22,7 +22,7 @@
 本题跟77. Combinations题很类似,总体方法基本一致。对于给定字符串用DFS层层遍历，唯一的区别在于本题多了一个回文的判断。
 
 ##### 思路：
-1. 主题见70.Combinations
+1. 主体思路见70.Combinations
 2. 回文判断（就是比较字符串中的首尾字符是否一致）
 
 ##### Js实现：
@@ -82,5 +82,7 @@ function isPalindrome(str) {
   return true;
 }
 ```
+
+##### 方法 #2 动态规划
 
 
