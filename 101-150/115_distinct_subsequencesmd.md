@@ -46,7 +46,7 @@ t 0 0 0 0 0 0 0 3
 
 ```
 let numDistinct = function(s, t) {
-  //如果字符串有一个为空或者长度为0，需要删除的字符为0
+  //如果字符串有一个为空或者长度为0
   if (s.length === 0 || s === null || t === null || t.length === 0) return 0;
   //新建二维数组table
   let table = [];
