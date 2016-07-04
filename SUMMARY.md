@@ -14,5 +14,5 @@
 * [70. Climbing Stairs](51-100/70. Climbing Stairs.md)
 * [77. Combinations](51-100/77. Combinations.md)
 * [100. Same Tree](51-100/100. Same Tree.md)
-* [115. Distinct Subsequences](101-150/115. Distinct Subsequences.md )
+* [115. Distinct Subsequences](101-150/115_distinct_subsequencesmd.md)
 
