@@ -4,7 +4,7 @@
 * [1. Two Sum](1-50/1_Two_Sum.md)
 * [2. Add Two Numbers](1-50/2_Add_Two_Numbers.md)
 * [3. Longest Substring Without Repeating Characters](1-50/3_Longest_Substring_Without_Repeating_Characters.md)
-* [4. Median of Two Sorted Arrays](1-50/4. Median of Two Sorted Arrays.md)
+* [4. Median of Two Sorted Arrays](1-50/4_Median_of_Two_Sorted_Arrays.md)
 * [5. Longest Palindromic Substring](1-50/5. Longest Palindromic Substring.md)
 * [6. ZigZag Conversion](1-50/6. ZigZag Conversion.md)
 * [7. Reverse Integer](1-50/7. Reverse Integer.md)
