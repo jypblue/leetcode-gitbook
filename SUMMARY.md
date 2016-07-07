@@ -8,7 +8,7 @@
 * [5. Longest Palindromic Substring](1-50/5_Longest_Palindromic_Substring.md)
 * [6. ZigZag Conversion](1-50/6_ZigZag_Conversion.md)
 * [7. Reverse Integer](1-50/7_Reverse_Integer.md)
-* [8. String to Integer (atoi)](1-50/8. String to Integer.md)
+* [8. String to Integer (atoi)](1-50/8_String_to_Integer.md)
 * [9. Palindrome Number](1-50/9_Palindrome_Number.md)
 * [14. Longest Common Prefix](1-50/14. Longest Common Prefix.md)
 * [39. Combination Sum](1-50/39. Combination Sum.md)
