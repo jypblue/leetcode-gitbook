@@ -17,5 +17,6 @@
 * [100. Same Tree](51-100/100_Same_Tree.md)
 * [115. Distinct Subsequences](101-150/115_distinct_subsequencesmd.md)
 * [131. Palindrome Partitioning](101-150/131_Palindrome_Partitioning.md)
+* [149. Max Points on a Line](101-150/149_Max_Points_on_a_Line.md)
 
 
