@@ -6,7 +6,7 @@
 * [3. Longest Substring Without Repeating Characters](1-50/3_Longest_Substring_Without_Repeating_Characters.md)
 * [4. Median of Two Sorted Arrays](1-50/4_Median_of_Two_Sorted_Arrays.md)
 * [5. Longest Palindromic Substring](1-50/5_Longest_Palindromic_Substring.md)
-* [6. ZigZag Conversion](1-50/6. ZigZag Conversion.md)
+* [6. ZigZag Conversion](1-50/6_ZigZag_Conversion.md)
 * [7. Reverse Integer](1-50/7. Reverse Integer.md)
 * [8. String to Integer (atoi)](1-50/8. String to Integer.md)
 * [9. Palindrome Number](1-50/9_Palindrome_Number.md)
