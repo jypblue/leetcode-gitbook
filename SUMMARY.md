@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [1. Two Sum](1-50/1. Two Sum.md)
+* [1. Two Sum](1-50/1_Two_Sum.md)
 * [2. Add Two Numbers](1-50/2. Add Two Numbers.md)
 * [3. Longest Substring Without Repeating Characters](1-50/3. Longest Substring Without Repeating Characters.md)
 * [4. Median of Two Sorted Arrays](1-50/4. Median of Two Sorted Arrays.md)
