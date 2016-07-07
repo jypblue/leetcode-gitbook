@@ -9,6 +9,7 @@
 * [6. ZigZag Conversion](1-50/6. ZigZag Conversion.md)
 * [7. Reverse Integer](1-50/7. Reverse Integer.md)
 * [8. String to Integer (atoi)](1-50/8. String to Integer.md)
+* [9. Palindrome Number](1-50/9.Palindrome_Number.md)
 * [14. Longest Common Prefix](1-50/14. Longest Common Prefix.md)
 * [39. Combination Sum](1-50/39. Combination Sum.md)
 * [70. Climbing Stairs](51-100/70. Climbing Stairs.md)
