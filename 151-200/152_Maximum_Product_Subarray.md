@@ -11,3 +11,7 @@ the contiguous subarray `[2,3]` has the largest product = `6`.
 >Subscribe to see which companies asked this question
 
 ##### 题意：
+在数组中找到子阵（至少包含一个数字）数字的最大乘积
+
+##### 分析：
+根据题目提示可以发现，数字有正有负。当乘数中都为整数的时候
