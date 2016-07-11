@@ -36,7 +36,7 @@
  * @param {string} s
  * @return {number}
  */
-var titleToNumber = function(s) {
+let titleToNumber = function(s) {
     let result = 0;
     let i = s.length - 1;
     let t = 0;
