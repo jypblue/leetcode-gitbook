@@ -1,5 +1,5 @@
 # 168. Excel Sheet Column Title
-##### Tags:
+##### Tags
 1. Math
 
 >Given a positive integer, return its corresponding column title as appear in an Excel sheet.
