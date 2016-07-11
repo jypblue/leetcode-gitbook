@@ -18,5 +18,6 @@
 * [115. Distinct Subsequences](101-150/115_distinct_subsequencesmd.md)
 * [131. Palindrome Partitioning](101-150/131_Palindrome_Partitioning.md)
 * [149. Max Points on a Line](101-150/149_Max_Points_on_a_Line.md)
+* [152. Maximum Product Subarray](151-200/152_Maximun_Product_Subarray.md)
 
 
