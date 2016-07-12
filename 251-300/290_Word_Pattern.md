@@ -60,3 +60,41 @@ let wordPattern = function(pattern, str) {
 };
 
 ```
+
+##### 方法 #2
+
+```
+/**
+ * @param {string} pattern
+ * @param {string} str
+ * @return {boolean}
+ */
+let wordPattern = function(pattern, str) {
+    let strArr = str.split(" ");
+    let mapPattern = new Map();
+    let mapStr = new Map();
+    
+    if(strArr.length !== pattern.length){
+        return false;
+    }
+    
+    for(let i = 0; i < strArr.length; i++) {
+      mapPattern.set(pattern.charAt(i),i);
+      mapStr.set(strArr[i],i);
+      //第二种解法128ms;
+       if(mapStr.get(strArr[i]) !== mapPattern.get(pattern.charAt(i)) || mapStr.size !== mapPattern.size) {
+           return false;
+         }
+    }
+    return true;
+};
+
+```
+
+
+
+
+
+
+
+
