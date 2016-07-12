@@ -32,7 +32,7 @@ pattern = "abba", str = "dog dog dog dog" should return false.
 
 ##### 方法 #1
 ##### 复杂度：
-时间复杂度O(n<sup>2</sup>)
+时间复杂度O(n)
 ```
 /**
  * @param {string} pattern
