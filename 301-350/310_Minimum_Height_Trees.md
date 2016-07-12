@@ -38,7 +38,63 @@ Given n = 4, edges = [[1, 0], [1, 2], [1, 3]]
 >return [3, 4]
 
 ##### 题意：
+对于一个有树特征的无向图，我们可以选择任何节点作为根。结果图是一个根深蒂固的树。所有可能的根树中，那些具有最小高度为最小高度的树木（MHTS）。在这样一个图，写一个函数来找到所有MHTS并返回一个列表的根标签。
 
+##### 分析：
+
+##### 思路：
+
+##### Js实现：
+
+```
+/**
+ * @param {number} n
+ * @param {number[][]} edges
+ * @return {number[]}
+ */
+var findMinHeightTrees = function(n, edges) {
+    if (n === 1) {
+        let result = [];
+        result.push(0);
+        return result;
+    }
+    
+    let list = new Array(n);
+    for (let i = 0; i < n; i++) list[i] = [];
+    
+    for (let edge of edges) {
+            list[edge[0]].push(edge[1]);
+            list[edge[1]].push(edge[0]);
+    }
+    
+    let leaf = [];
+    for(let i = 0 ; i < n;i++) {
+        if(list[i].length === 1 ) {
+            leaf.push(i);
+        }
+    }
+
+    while(n > 2) {
+     n -= leaf.length;
+
+        let newLeaf = [];
+            for (let i of leaf) {
+                let j = list[i][0];
+                list[j].forEach(function(value,index){
+                    if(value == i) {
+                        list[j].splice(index,1);
+                    }
+                })
+                
+                if(list[j].length ==1) {
+                    newLeaf.push(j);
+                }
+            }
+        leaf = newLeaf;
+    } 
+    return leaf;
+};
+```
 
 
 
