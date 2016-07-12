@@ -30,7 +30,7 @@ pattern = "abba", str = "dog dog dog dog" should return false.
 
 ##### 方法 #1
 ##### 复杂度：
-
+时间复杂度O(n<sup>2</sup>)
 ```
 /**
  * @param {string} pattern
@@ -91,7 +91,31 @@ let wordPattern = function(pattern, str) {
 
 ```
 
+##### 方法 #3
 
+```
+//第三种解法168ms
+ var wordPattern = function(pattern, str) {
+     var strArr = str.split(' ');
+     var obj = {};
+     if(strArr.length !== pattern.length) return false;
+    
+     for(var i = 0; i < pattern.length; i++) {
+         var s = pattern[i];
+         s = '1_' + s;
+        
+         if(!obj[s] && !obj[strArr[i]]) {
+             obj[s] = strArr[i];
+             obj[strArr[i]] = s;
+             console.log(obj);
+         } else {
+             if(obj[s] !== strArr[i]) return false;
+         }
+     }
+     return true;
+ }
+
+```
 
 
 
