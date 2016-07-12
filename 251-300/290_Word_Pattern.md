@@ -19,3 +19,44 @@ pattern = "abba", str = "dog dog dog dog" should return false.
 
 
 ##### 题意：
+给定一个模式和一个字符串，如果发现字符串遵循相同的模式，返回true,不相同则返回false。
+
+##### 分析：
+
+##### 思路：
+
+##### Js实现：
+
+
+##### 方法 #1
+##### 复杂度：
+
+```
+/**
+ * @param {string} pattern
+ * @param {string} str
+ * @return {boolean}
+ */
+let wordPattern = function(pattern, str) {
+    let strArr = str.split(" ");
+    let mapPattern = new Map();
+    let mapStr = new Map();
+    
+    if(strArr.length !== pattern.length){
+        return false;
+    }
+    
+    for(let i = 0; i < strArr.length; i++) {
+      mapPattern.set(pattern.charAt(i),i);
+      mapStr.set(strArr[i],i);
+    }
+    //第一种解法108-120ms
+    for(let i = 0; i < strArr.length; i++) {
+        if(mapStr.get(strArr[i]) !== mapPattern.get(pattern.charAt(i))) {
+          return false;
+        }
+    }
+    return true;
+};
+
+```
