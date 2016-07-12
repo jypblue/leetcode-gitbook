@@ -45,6 +45,8 @@ Given n = 4, edges = [[1, 0], [1, 2], [1, 3]]
 ##### 思路：
 
 ##### Js实现：
+##### 复杂度：
+时间复杂度O(n<sup>2</sup>)
 
 ```
 /**
@@ -57,26 +59,21 @@ var findMinHeightTrees = function(n, edges) {
         let result = [];
         result.push(0);
         return result;
-    }
-    
+    } 
     let list = new Array(n);
     for (let i = 0; i < n; i++) list[i] = [];
-    
     for (let edge of edges) {
             list[edge[0]].push(edge[1]);
             list[edge[1]].push(edge[0]);
     }
-    
     let leaf = [];
     for(let i = 0 ; i < n;i++) {
         if(list[i].length === 1 ) {
             leaf.push(i);
         }
     }
-
     while(n > 2) {
      n -= leaf.length;
-
         let newLeaf = [];
             for (let i of leaf) {
                 let j = list[i][0];
@@ -85,7 +82,6 @@ var findMinHeightTrees = function(n, edges) {
                         list[j].splice(index,1);
                     }
                 })
-                
                 if(list[j].length ==1) {
                     newLeaf.push(j);
                 }
