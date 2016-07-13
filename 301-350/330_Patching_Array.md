@@ -43,6 +43,10 @@
 5. 插入miss本身是一个选择，因为它的边界双打和覆盖每一个数字之间的界限[ 0，miss+miss]
 
 ##### 思路：
+思路很简单:
+1. 当miss < n 时，循环数组；
+2. 如果nums[i] <= miss; nums[i]累加到miss中；
+3. 如果nums[i] > miss; miss累加miss,count自增
 
 ##### Js实现：
 ##### 复杂度：
