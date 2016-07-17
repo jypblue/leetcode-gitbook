@@ -25,6 +25,7 @@
 * [273. Integer to English Words](251-300/273_Integer_to_English_Words.md)
 * [290. Word Pattern ](251-300/290_Word_Pattern.md)
 * [310. Minimum Height Trees](301-350/310_Minimum_Height_Trees.md)
+* [321. Create Maximum Number](301-350/321_Create_Maximum_Number.md)
 * [330. Patching Array ](301-350/330_Patching_Array.md)
 
 
