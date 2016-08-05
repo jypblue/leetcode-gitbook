@@ -11,7 +11,6 @@
 * [8. String to Integer (atoi)](1-50/8_String_to_Integer.md)
 * [9. Palindrome Number](1-50/9_Palindrome_Number.md)
 * [10. Regular Expression Matching](1-50/10_Regular_Expression_Matching.md)
-* [11. Container With Most Water](1-50/11_Container_With_Most_Water.md)
 * [14. Longest Common Prefix](1-50/14_Longest_Common_Prefix.md)
 * [39. Combination Sum](1-50/39_Combination_Sum.md)
 * [70. Climbing Stairs](51-100/70_Climbing_Stairs.md)
@@ -29,5 +28,4 @@
 * [310. Minimum Height Trees](301-350/310_Minimum_Height_Trees.md)
 * [321. Create Maximum Number](301-350/321_Create_Maximum_Number.md)
 * [330. Patching Array](301-350/330_Patching_Array.md)
-
 
