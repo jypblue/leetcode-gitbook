@@ -15,7 +15,7 @@ Could negative integers be palindromes? (ie, -1)
 >There is a more generic way of solving this problem.
 
 ##### 题意：
-判断一个整数是否是回文，不能使用二外空间
+判断一个整数是否是回文，不能使用额外空间
 
 ##### 分析：
 此题与题7.Reverse Integer 类似，做法也类似，都是将数字反向颠倒过来比较是否相等即可。
