@@ -17,6 +17,33 @@
 此外，还要保持跟踪的是最大值。
 
 ##### 思路
+1. 判断竖直垂线是否小于2或者为0
+2. 左右遍历获得最终最大值返回
 
 
+##### JS实现：
+##### 复杂度
+时间复杂度O(n)
+
+```
+var maxArea = function(height) {
+  if (height === null || height.length < 2) {
+    return 0;
+  }
+
+  let max = 0;
+  let left = 0;
+  let right = height.length - 1;
+
+  while (left < right) {
+    max = Math.max(max, (right - left) * Math.min(height[left], height[right]));
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+  return max;
+};
+```
 
