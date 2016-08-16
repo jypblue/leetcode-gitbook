@@ -15,6 +15,8 @@
 * [12. Integer to Roman](1-50/12_Integer_to_Roman.md)
 * [13. Roman to Integer](1-50/13_ Roman_to_Integer.md)
 * [14. Longest Common Prefix](1-50/14_Longest_Common_Prefix.md)
+* [15. 3Sum](1-50/15_3Sum.md)
+* [16. 3Sum Closest](1-50/16_3Sum_Closest.md)
 * [39. Combination Sum](1-50/39_Combination_Sum.md)
 * [70. Climbing Stairs](51-100/70_Climbing_Stairs.md)
 * [77. Combinations](51-100/77_Combinations.md)
