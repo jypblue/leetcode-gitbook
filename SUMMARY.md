@@ -17,6 +17,8 @@
 * [14. Longest Common Prefix](1-50/14_Longest_Common_Prefix.md)
 * [15. 3Sum](1-50/15_3Sum.md)
 * [16. 3Sum Closest](1-50/16_3Sum_Closest.md)
+* [17. Letter Combinations of a Phone Number](1-50/17_Letter_Combinations_of_a_Phone_Number.md)
+* [18. 4Sum](1-50/18_4Sum.md)
 * [39. Combination Sum](1-50/39_Combination_Sum.md)
 * [70. Climbing Stairs](51-100/70_Climbing_Stairs.md)
 * [77. Combinations](51-100/77_Combinations.md)
